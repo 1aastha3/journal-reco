@@ -1,1 +1,937 @@
-{"apiMessage": "This JSON was provided by Springer Nature", "query": "physics", "apiKey": "ba1b622422755eaaf763ec9b95b831d7", "nextPage": "/metadata/json?q=physics&s=11&p=10&api_key=ba1b622422755eaaf763ec9b95b831d7", "result": [{"total": "2787049", "start": "1", "pageLength": "10", "recordsDisplayed": "10"}], "records": [{"contentType": "Article", "identifier": "doi:10.1007/s42757-022-0148-4", "language": "en", "url": [{"format": "", "platform": "", "value": "http://dx.doi.org/10.1007/s42757-022-0148-4"}], "title": "Conservation of energy in the direct numerical simulation of interface-resolved multiphase flows", "creators": [{"creator": "Valle, Nicol\u00e1s"}, {"creator": "Verstappen, Roel"}], "publicationName": "Experimental and Computational Multiphase Flow", "openaccess": "true", "doi": "10.1007/s42757-022-0148-4", "publisher": "Springer", "publicationDate": "2023-12-01", "publicationType": "Journal", "issn": "2661-8877", "volume": "5", "number": "4", "genre": ["OriginalPaper", "Research Article"], "startingPage": "333", "endingPage": "343", "journalId": "42757", "copyright": "\u00a92023 The Author(s)", "abstract": "In the context of deformable bubbles, surface tension produces a dynamic exchange between kinetic and surface elastic energy. This exchange of energy is relevant to bubble dynamics, like bubble induced turbulence or drag reduction. Unfortunately, the underlying physical mechanism is not exactly explained by the state-of-the-art numerical methods. In particular, the numerical violation of energy conservation results in an uncontrolled evolution of the system and yields well-known numerical pathologies. To remedy these problems, we tackle two of the most problematic terms in the numerical formulation: convection and surface tension. We identify the key mathematical identities that imply both physical conservation and numerical stability, present a semi-discretization of the problem that is fully energy preserving, and assess their stability in terms of the discrete energy contributions. Numerical experiments showcase the stability of the method and its energy evolution for stagnant and oscillating inviscid bubbles. Results show robust as well as bounded dynamics of the system, representing the expected physical mechanism.", "subjects": ["Engineering", "Engineering Fluid Dynamics", "Fluid- and Aerodynamics", "Environmental Engineering/Biotechnology"]}, {"contentType": "Article", "identifier": "doi:10.1007/s42757-022-0139-5", "language": "en", "url": [{"format": "", "platform": "", "value": "http://dx.doi.org/10.1007/s42757-022-0139-5"}], "title": "Modelling of free bubble growth with Interface Capturing Computational Fluid Dynamics", "creators": [{"creator": "Giustini, Giovanni"}, {"creator": "Issa, Raad I."}], "publicationName": "Experimental and Computational Multiphase Flow", "openaccess": "true", "doi": "10.1007/s42757-022-0139-5", "publisher": "Springer", "publicationDate": "2023-12-01", "publicationType": "Journal", "issn": "2661-8877", "volume": "5", "number": "4", "genre": ["OriginalPaper", "Research Article"], "startingPage": "357", "endingPage": "364", "journalId": "42757", "copyright": "\u00a92022 The Author(s)", "abstract": "This paper presents simulations of the growth of stationary and rising vapour bubbles in an extend pool of liquid using an Interface Capturing Computational Fluid Dynamics (CFD) methodology coupled with a method for simulating interfacial mass transfer at the vapour-liquid interface. The model enables mechanistic prediction of the local rate of phase change at the vapour-liquid interface and is applicable to realistic cases involving two-phase mixtures with large density ratios. The simulation methodology is based on the Volume of Fluid (VOF) representation of the flow, whereby an interfacial region in which mass transfer occurs is implicitly identified by a phase indicator, in this case the volume fraction of liquid, which varies from the value pertaining to the \u201cbulk\u201d liquid to the value of the bulk vapour. The novel methodology proposed here has been implemented using the Finite Volume framework and solution methods typical of \u201cindustrial\u201d CFD practice embedded in the OpenFOAM CFD toolbox. Simulations are validated via comparison against experimental observations of spherical bubble growth in zero gravity and of the growth of a rising bubble in normal gravity. The validation cases represent a severe test for Interface Capturing methodologies due to large density ratios, the presence of strong interfacial evaporation and upward bubble rise motion. Agreement of simulation results with measurements available in the literature demonstrates that the methodology detailed herein is applicable to modelling bubble growth driven by phase-change in real fluids.", "subjects": ["Engineering", "Engineering Fluid Dynamics", "Fluid- and Aerodynamics", "Environmental Engineering/Biotechnology"]}, {"contentType": "Article", "identifier": "doi:10.1007/s42757-022-0156-4", "language": "en", "url": [{"format": "", "platform": "", "value": "http://dx.doi.org/10.1007/s42757-022-0156-4"}], "title": "Experimental and numerical study on the transport of dilute bubbles in a T-junction channel flow", "creators": [{"creator": "Frense, Erik"}, {"creator": "Yang, Xinghao"}, {"creator": "R\u00fcdiger, Frank"}, {"creator": "M\u00fchlhausen, Mark-Patrick"}, {"creator": "Fr\u00f6hlich, Jochen"}], "publicationName": "Experimental and Computational Multiphase Flow", "openaccess": "true", "doi": "10.1007/s42757-022-0156-4", "publisher": "Springer", "publicationDate": "2023-12-01", "publicationType": "Journal", "issn": "2661-8877", "volume": "5", "number": "4", "genre": ["OriginalPaper", "Research Article"], "startingPage": "396", "endingPage": "410", "journalId": "42757", "copyright": "\u00a92023 The Author(s)", "abstract": "The present study investigates the transport of dilute bubbles by transitional flow in a joining, cross-flow-type T-junction channel geometry with Reynolds numbers at the outlet branch from Re 3 = 600 to 1800 and an inlet volume flow rate ratio of 1. Bubbles with diameters between d b = 400 and 600 \u00b5m are considered. The schematic pattern of the single-phase flow is introduced based on streakline dye visualizations. Complex 3D flow due to the narrow channel design dominates the recirculation area and flow instabilities become important with increasing Reynolds number, which can be observed by the fading of dye intensity. A numerical method is presented with unsteady boundary conditions based on laser Doppler velocimetry measurements. Bubble trajectories are obtained by an Euler-Lagrange approach. Using high-speed shadowgraphy method combined with image processing, bubble sizes were measured, and bubble trajectories were evaluated. Experimental bubble trajectories and numerically predicted bubble positions show good agreement for Re 3 = 600, which is also the case with the dye visualization image. For higher Reynolds numbers, measurements of the bubble trajectories are reported and compared to dye visualization images. The increasing flow instabilities influence the bubble transport, resulting in large variations of bubble locations.", "subjects": ["Engineering", "Engineering Fluid Dynamics", "Fluid- and Aerodynamics", "Environmental Engineering/Biotechnology"]}, {"contentType": "Article", "identifier": "doi:10.1007/s42757-022-0144-8", "language": "en", "url": [{"format": "", "platform": "", "value": "http://dx.doi.org/10.1007/s42757-022-0144-8"}], "title": "Experimental and numerical study of free-falling streams of particles impacting an inclined surface", "creators": [{"creator": "Dodds, David"}, {"creator": "Sarhan, Abd Alhamid Rafea"}, {"creator": "Naser, Jamal"}], "publicationName": "Experimental and Computational Multiphase Flow", "openaccess": "true", "doi": "10.1007/s42757-022-0144-8", "publisher": "Springer", "publicationDate": "2023-12-01", "publicationType": "Journal", "issn": "2661-8877", "volume": "5", "number": "4", "genre": ["OriginalPaper", "Research Article"], "startingPage": "381", "endingPage": "395", "journalId": "42757", "copyright": "\u00a92022 The Author(s)", "abstract": "This paper presents a detailed experimental and numerical analysis of free-falling particle streams impacting a 45\u00b0 inclined surface of differing materials. The particles used in this study were glass spheres with average diameters of 136 and 342 \u00b5m and a density of 2500 kg/m 3 . The three mass flow rates considered are 50, 150, and 250 grams per minute (gpm). The effect of wall material on the collision process was also analysed. Special attention was paid to the influence of wall roughness. Therefore, a plate of stainless steel with polished surface, an aluminium sheet, and a Perspex plate with similar properties to those of the rest of the wall sections were used. The experimental data were used to improve and validate a wall collision model in the frame of the Lagrangian approach. A new drag force formula that includes the effects of particle concentration as well as particle Reynolds number was implemented into commercially available codes from CFX4-4 package. It was found that the improved CFD model better predicted the experimental measurements for the particle rebound properties. The rough-wall model in these results showed greater effect on smaller particles than on larger particles. The results also showed that the improved CFD model predicted the velocity changes slightly better than the standard model, and this was confirmed by both the quantitative velocity comparisons and the qualitative concentration plots. Finally, the inclusion of the particle-particle collision was shown to be the dominant factor in providing the dispersion of the particles post collision. Without a sufficient particle-particle collision model, the standard model showed all particles behaving virtually identical, with the main particle stream continuing after the collision process.", "subjects": ["Engineering", "Engineering Fluid Dynamics", "Fluid- and Aerodynamics", "Environmental Engineering/Biotechnology"]}, {"contentType": "Article", "identifier": "doi:10.1007/s42757-022-0152-8", "language": "en", "url": [{"format": "", "platform": "", "value": "http://dx.doi.org/10.1007/s42757-022-0152-8"}], "title": "Modeling condensing flows of humid air in transonic nozzles", "creators": [{"creator": "Hertwig, Tim"}, {"creator": "Wittmann, Tim"}, {"creator": "Wi\u015bniewski, Piotr"}, {"creator": "Friedrichs, Jens"}], "publicationName": "Experimental and Computational Multiphase Flow", "openaccess": "true", "doi": "10.1007/s42757-022-0152-8", "publisher": "Springer", "publicationDate": "2023-12-01", "publicationType": "Journal", "issn": "2661-8877", "volume": "5", "number": "4", "genre": ["OriginalPaper", "Research Article"], "startingPage": "344", "endingPage": "356", "journalId": "42757", "copyright": "\u00a92023 The Author(s)", "abstract": "The ability to accurately model condensing flows is crucial for understanding such flows in many applications. Condensing flows of pure steam have been studied extensively in the past, and several droplet growth models have been derived. The rationale for the choice of growth models for condensation in humid air is less established. Furthermore, only a few validation cases for condensation in such flows exist. This paper aims to identify existing limitations of common droplet growth laws. The Hertz\u2014Knudsen model is compared to heat-transfer-based models by Gyarmathy and Young, using an Euler\u2014Lagrange approach in Ansys Fluent. For this, an adaption for Young\u2019s growth law is introduced, allowing its application in condensation of different gas mixtures. The numerical model has been validated and applied to flows in nozzles and turbines in previous publications. The accuracy of the droplet growth models is investigated in transonic nozzle test cases. A case with pure steam and a case with humid air at two different humidity values are considered. Finally, the influence of humidity, Knudsen number, and droplet radius on the growth rate of each model is shown analytically. Flows at lower humidity values with longer condensation zones are shown to benefit from the higher sensitivity of the Hertz\u2014Knudsen model to the mass fraction of water vapor in the flow. Heat-transfer-based models tend to overestimate condensation in such flows. However, the ability to empirically adapt the growth model by Young and its applicability in different Knudsen numbers results in good agreement with validation data over a wide range of cases.", "subjects": ["Engineering", "Engineering Fluid Dynamics", "Fluid- and Aerodynamics", "Environmental Engineering/Biotechnology"]}, {"contentType": "Article", "identifier": "doi:10.1134/S1061830923700274", "language": "en", "url": [{"format": "", "platform": "", "value": "http://dx.doi.org/10.1134/S1061830923700274"}], "title": "On the Solution to One Problem of Magnetostatics for a Pipe with Inner Surface Defect", "creators": [{"creator": "Dyakin, V. V."}, {"creator": "Kudryashova, O. V."}, {"creator": "Rayevskii, V. Ya."}], "publicationName": "Russian Journal of Nondestructive Testing", "openaccess": "false", "doi": "10.1134/S1061830923700274", "publisher": "Springer", "publicationDate": "2023-12-01", "publicationType": "Journal", "issn": "1608-3385", "volume": "59", "number": "2", "genre": ["OriginalPaper", "ELECTROMAGNETIC \nMETHODS"], "startingPage": "204", "endingPage": "214", "journalId": "11181", "copyright": "\u00a92023 Pleiades Publishing, Ltd.", "abstract": "Abstract An algorithm has been developed and implemented for the numerical solution of a direct linear magnetostatics problem by calculating the resulting field of a pipe with a surface defect on its inner wall under the assumption that the perpendicular section of the pipe and the vector of intensity of the external magnetizing field remain unchanged along the pipe length axis. This has made it possible to take the two-dimensional integro-differential equation of magnetostatics as a basis. The algorithm is implemented in the FORTRAN programming language. The results are tested for reliability using problems solved exactly. Illustrative curves are constructed. The possibilities of applying the obtained calculation methodology to a class of problems that differ in some way in their formulation are indicated.", "subjects": ["Materials Science", "Characterization and Evaluation of Materials", "Structural Materials"]}, {"contentType": "Article", "identifier": "doi:10.1007/s11307-022-01785-3", "language": "en", "url": [{"format": "", "platform": "", "value": "http://dx.doi.org/10.1007/s11307-022-01785-3"}], "title": "Contrast Media Research Symposium 2022", "publicationName": "Molecular Imaging and Biology", "openaccess": "false", "doi": "10.1007/s11307-022-01785-3", "publisher": "Springer", "publicationDate": "2023-12-01", "publicationType": "Journal", "issn": "1860-2002", "volume": "24", "number": "1", "genre": ["News", "Abstracts"], "startingPage": "1", "endingPage": "61", "journalId": "11307", "copyright": "\u00a92022 The Author(s), under exclusive licence to World Molecular Imaging Society", "abstract": "", "subjects": ["Medicine & Public Health", "Imaging / Radiology"]}, {"contentType": "Article", "identifier": "doi:10.1007/s40868-022-00121-2", "language": "en", "url": [{"format": "", "platform": "", "value": "http://dx.doi.org/10.1007/s40868-022-00121-2"}], "title": "Experimental study of an oscillating water column wave energy converter based on regular waves", "creators": [{"ORCID": "0000-0002-0126-5823", "creator": "EL Bouji, Soufiane"}, {"creator": "Kamil, Noureddine"}, {"creator": "Beidouri, Zitouni"}], "publicationName": "Marine Systems & Ocean Technology", "openaccess": "false", "doi": "10.1007/s40868-022-00121-2", "publisher": "Springer", "publicationDate": "2023-12-01", "publicationType": "Journal", "issn": "2199-4749", "volume": "17", "number": "3-4", "genre": ["OriginalPaper", "Original Paper"], "startingPage": "147", "endingPage": "163", "journalId": "40868", "copyright": "\u00a92022 The Author(s), under exclusive licence to Sociedade Brasileira de Engenharia Naval", "abstract": "Increasingly, marine renewable energies are taking over as one of the most relevant solutions to minimize dependence on fossil fuels. The management and exploitation of such energy requires the optimization of converters that will, later on, ensure the conversion of hydraulic energy into electrical energy; among these converters are the oscillating water column. An OWC is characterized by its simplicity and its effectiveness against turbulent ocean conditions. The performance of OWCs depends strongly on the geometrical parameters of the air chamber such as: chamber walls, width, thickness of the front wall, slope at the bottom of the chamber and size of the opening. In this sense, the manuscript presents a parametric approach to investigate, by experimental tests, the hydrodynamic properties and the performance of oscillating water column wave energy converter (OWC). The effects of some geometrical key parameters of the system are analyzed. The tests are carried out on a small\u2010size OWC. The work seems to be interesting in view of its experimental aspect. We have realized a prototype of an oscillating water column (OWC) which consists of a box (an air chamber) having the shape of parallelepipeds. The experimental results found by this study showed different optimums of: (a) the distance between the wave generator and the device (2 positions). (b) The depth of water in the hydraulic channel. (c) The immersion depth of the front wall of the chamber. (d) The opening at the bottom of the prototype. The results obtained show that the coupling of the geometrical parameters of the device and the conditions of installation leads to an improvement of the hydrodynamic performances of the OWC. The study also shows that the various optimums found give a considerable increase in the energy output.", "subjects": ["Engineering", "Offshore Engineering"]}, {"contentType": "Article", "identifier": "doi:10.1007/s42757-022-0150-x", "language": "en", "url": [{"format": "", "platform": "", "value": "http://dx.doi.org/10.1007/s42757-022-0150-x"}], "title": "Development of a multiphase perfusion model for biomimetic reduced-order dense tumors", "creators": [{"creator": "Akash, Mohammad Mehedi Hasan"}, {"creator": "Chakraborty, Nilotpal"}, {"creator": "Mohammad, Jiyan"}, {"creator": "Reindl, Katie"}, {"creator": "Basu, Saikat"}], "publicationName": "Experimental and Computational Multiphase Flow", "openaccess": "true", "doi": "10.1007/s42757-022-0150-x", "publisher": "Springer", "publicationDate": "2023-09-01", "publicationType": "Journal", "issn": "2661-8877", "volume": "5", "number": "3", "genre": ["OriginalPaper", "Research Article"], "startingPage": "319", "endingPage": "329", "journalId": "42757", "copyright": "\u00a92023 The Author(s)", "abstract": "Dense fibrous extracellular constitution of solid tumors exerts high resistance to diffusive transport into it; additionally, the scarcity of blood and lymphatic flows hinders convection. The complexity of fluidic transport mechanisms in such tumor environments still presents open questions with translational end goals. For example, clinical diagnosis and targeted drug delivery platforms for such dense tumors can ideally benefit from a quantitative framework on plasma uptake into the tumor. In this study, we present a computational model for physical parameters that may influence blood percolation and penetration into simple biomimetic solid tumor geometry. The model implements three-phase viscous-laminar transient simulation to mimic the transport physics inside a tumor-adhering blood vessel and measures the constituent volume fractions of the three considered phases, viz. plasma, RBCs (red blood cells, also known as \u201cerythrocytes\u201d), and WBCs (white blood cells, also known as \u201cleukocytes\u201d) at three different flow times, while simultaneously recording the plasma pressure and velocity at the entry point to the tumor\u2019s extracellular space. Subsequently, to quantify plasma perfusion within the tumor zone, we proposed a reduced-order two-dimensional transport model for the tumor entry zone and its extracellular space for three different fenestra diameters: 0.1, 0.3, and 0.5 \u00b5m; the simulations were two-phase viscous-laminar transient. The findings support the hypothesis that plasma percolation into the tumor is proportional to the leakiness modulated by the size of fenestra openings, and the rate of percolation decays with the diffusion distance.", "subjects": ["Engineering", "Engineering Fluid Dynamics", "Fluid- and Aerodynamics", "Environmental Engineering/Biotechnology"]}, {"contentType": "Article", "identifier": "doi:10.1007/s41095-022-0304-6", "language": "en", "url": [{"format": "", "platform": "", "value": "http://dx.doi.org/10.1007/s41095-022-0304-6"}], "title": "Correlation-aware probabilistic data summarization for large-scale multi-block scientific data visualization", "creators": [{"creator": "Yang, Yang"}, {"creator": "Lu, Kecheng"}, {"creator": "Wu, Yu"}, {"creator": "Wang, Yunhai"}, {"creator": "Cao, Yi"}], "publicationName": "Computational Visual Media", "openaccess": "true", "doi": "10.1007/s41095-022-0304-6", "publisher": "Springer", "publicationDate": "2023-09-01", "publicationType": "Journal", "issn": "2096-0662", "volume": "9", "number": "3", "genre": ["OriginalPaper", "Research Article"], "startingPage": "513", "endingPage": "529", "journalId": "41095", "copyright": "\u00a92023 The Author(s)", "abstract": "In this paper, we propose a correlation-aware probabilistic data summarization technique to efficiently analyze and visualize large-scale multi-block volume data generated by massively parallel scientific simulations. The core of our technique is correlation modeling of distribution representations of adjacent data blocks using copula functions and accurate data value estimation by combining numerical information, spatial location, and correlation distribution using Bayes\u2019 rule. This effectively preserves statistical properties without merging data blocks in different parallel computing nodes and repartitioning them, thus significantly reducing the computational cost. Furthermore, this enables reconstruction of the original data more accurately than existing methods. We demonstrate the effectiveness of our technique using six datasets, with the largest having one billion grid points. The experimental results show that our approach reduces the data storage cost by approximately one order of magnitude compared to state-of-the-art methods while providing a higher reconstruction accuracy at a lower computational cost.", "subjects": ["Computer Science", "Computer Graphics", "User Interfaces and Human Computer Interaction", "Artificial Intelligence", "Image Processing and Computer Vision"]}], "facets": [{"name": "subject", "values": [{"value": "Physics", "count": "1130498"}, {"value": "Physics, general", "count": "315403"}, {"value": "Engineering", "count": "315392"}, {"value": "Characterization and Evaluation of Materials", "count": "290667"}, {"value": "Physical Chemistry", "count": "239452"}, {"value": "Materials Science", "count": "238082"}, {"value": "Condensed Matter Physics", "count": "210305"}, {"value": "Chemistry", "count": "200464"}, {"value": "Theoretical, Mathematical and Computational Physics", "count": "197463"}, {"value": "Nanotechnology", "count": "188636"}, {"value": "Materials Science, general", "count": "183624"}, {"value": "Inorganic Chemistry", "count": "175458"}, {"value": "Nuclear Physics, Heavy Ions, Hadrons", "count": "174024"}, {"value": "Science, Humanities and Social Sciences, multidisciplinary", "count": "171842"}, {"value": "Mathematics", "count": "168153"}, {"value": "Science, multidisciplinary", "count": "147252"}, {"value": "Classical Mechanics", "count": "144650"}, {"value": "Applied and Technical Physics", "count": "135150"}, {"value": "Solid State Physics", "count": "133295"}, {"value": "Classical and Continuum Physics", "count": "129524"}]}, {"name": "keyword", "values": [{"value": "Physical Chemistry", "count": "33155"}, {"value": "nuclear magnetic resonance", "count": "28215"}, {"value": "Analytical Chemistry", "count": "26002"}, {"value": "NMR", "count": "25401"}, {"value": "Statistical Physic", "count": "15846"}, {"value": "Inorganic Chemistry", "count": "15190"}, {"value": "Elementary Particle", "count": "15078"}, {"value": "Spectroscopy", "count": "12638"}, {"value": "Neural Network", "count": "11911"}, {"value": "chemical shift", "count": "11462"}, {"value": "nucleon separation energy", "count": "11292"}, {"value": "nucleon residual interaction parameter", "count": "11287"}, {"value": "mass excess", "count": "11206"}, {"value": "atomic mass", "count": "11192"}, {"value": "Q-value", "count": "11190"}, {"value": "nuclear binding energy", "count": "11189"}, {"value": "Polymer", "count": "10668"}, {"value": "Field Theory", "count": "10389"}, {"value": "Molecular Structure", "count": "10341"}, {"value": "Radiation", "count": "9958"}]}, {"name": "pub", "values": [{"value": "Nature", "count": "99590"}, {"value": "MRS Online Proceedings Library", "count": "70638"}, {"value": "Scientific Reports", "count": "32345"}, {"value": "Journal of High Energy Physics", "count": "28605"}, {"value": "Measurement Techniques", "count": "22179"}, {"value": "Journal of Radioanalytical and Nuclear Chemistry", "count": "21098"}, {"value": "Applied Physics A", "count": "20041"}, {"value": "Astrophysics and Space Science", "count": "18922"}, {"value": "JOM", "count": "17131"}, {"value": "Journal of Electronic Materials", "count": "15855"}, {"value": "Journal of Applied Spectroscopy", "count": "14915"}, {"value": "Journal of Materials Research", "count": "14608"}, {"value": "Nature Communications", "count": "14172"}, {"value": "Zeitschrift f\u00fcr Physik", "count": "13153"}, {"value": "Journal of Structural Chemistry", "count": "12396"}, {"value": "Solar Physics", "count": "11829"}, {"value": "Communications in Mathematical Physics", "count": "11697"}, {"value": "The European Physical Journal C", "count": "11541"}, {"value": "Journal of Statistical Physics", "count": "11112"}, {"value": "Applied Physics B", "count": "10933"}]}, {"name": "year", "values": [{"value": "2023", "count": "59688"}, {"value": "2022", "count": "113843"}, {"value": "2021", "count": "119245"}, {"value": "2020", "count": "115827"}, {"value": "2019", "count": "109106"}, {"value": "2018", "count": "106254"}, {"value": "2017", "count": "101086"}, {"value": "2016", "count": "96385"}, {"value": "2015", "count": "90992"}, {"value": "2014", "count": "91245"}, {"value": "2013", "count": "85058"}, {"value": "2012", "count": "76926"}, {"value": "2011", "count": "78148"}, {"value": "2010", "count": "72858"}, {"value": "2009", "count": "82048"}, {"value": "2008", "count": "70974"}, {"value": "2007", "count": "76993"}, {"value": "2006", "count": "52203"}, {"value": "2005", "count": "45909"}, {"value": "2004", "count": "51881"}]}, {"name": "country", "values": [{"value": "United States", "count": "507226"}, {"value": "Germany", "count": "306717"}, {"value": "Russia", "count": "305944"}, {"value": "China", "count": "248756"}, {"value": "India", "count": "184920"}, {"value": "United Kingdom", "count": "152347"}, {"value": "France", "count": "142254"}, {"value": "Japan", "count": "112812"}, {"value": "Italy", "count": "110612"}, {"value": "Canada", "count": "68409"}, {"value": "Switzerland", "count": "57515"}, {"value": "Spain", "count": "51987"}, {"value": "Netherlands", "count": "46385"}, {"value": "Australia", "count": "46021"}, {"value": "Poland", "count": "42748"}, {"value": "South Korea", "count": "39315"}, {"value": "Ukraine", "count": "38252"}, {"value": "Brazil", "count": "33414"}, {"value": "Sweden", "count": "32101"}, {"value": "Czech Republic", "count": "32051"}]}, {"name": "type", "values": [{"value": "Journal", "count": "1768246"}, {"value": "Book", "count": "1018803"}]}]}
+{
+  "apiMessage": "This JSON was provided by Springer Nature",
+  "query": "physics",
+  "apiKey": "ba1b622422755eaaf763ec9b95b831d7",
+  "nextPage": "/metadata/json?q=physics&s=11&p=10&api_key=ba1b622422755eaaf763ec9b95b831d7",
+  "result": [
+    {
+      "total": "2787049",
+      "start": "1",
+      "pageLength": "10",
+      "recordsDisplayed": "10"
+    }
+  ],
+  "records": [
+    {
+      "contentType": "Article",
+      "identifier": "doi:10.1007/s42757-022-0148-4",
+      "language": "en",
+      "url": [
+        {
+          "format": "",
+          "platform": "",
+          "value": "http://dx.doi.org/10.1007/s42757-022-0148-4"
+        }
+      ],
+      "title": "Conservation of energy in the direct numerical simulation of interface-resolved multiphase flows",
+      "creators": [
+        {
+          "creator": "Valle, Nicolás"
+        },
+        {
+          "creator": "Verstappen, Roel"
+        }
+      ],
+      "publicationName": "Experimental and Computational Multiphase Flow",
+      "openaccess": "true",
+      "doi": "10.1007/s42757-022-0148-4",
+      "publisher": "Springer",
+      "publicationDate": "2023-12-01",
+      "publicationType": "Journal",
+      "issn": "2661-8877",
+      "volume": "5",
+      "number": "4",
+      "genre": [
+        "OriginalPaper",
+        "Research Article"
+      ],
+      "startingPage": "333",
+      "endingPage": "343",
+      "journalId": "42757",
+      "copyright": "©2023 The Author(s)",
+      "abstract": "In the context of deformable bubbles, surface tension produces a dynamic exchange between kinetic and surface elastic energy. This exchange of energy is relevant to bubble dynamics, like bubble induced turbulence or drag reduction. Unfortunately, the underlying physical mechanism is not exactly explained by the state-of-the-art numerical methods. In particular, the numerical violation of energy conservation results in an uncontrolled evolution of the system and yields well-known numerical pathologies. To remedy these problems, we tackle two of the most problematic terms in the numerical formulation: convection and surface tension. We identify the key mathematical identities that imply both physical conservation and numerical stability, present a semi-discretization of the problem that is fully energy preserving, and assess their stability in terms of the discrete energy contributions. Numerical experiments showcase the stability of the method and its energy evolution for stagnant and oscillating inviscid bubbles. Results show robust as well as bounded dynamics of the system, representing the expected physical mechanism.",
+      "subjects": [
+        "Engineering",
+        "Engineering Fluid Dynamics",
+        "Fluid- and Aerodynamics",
+        "Environmental Engineering/Biotechnology"
+      ]
+    },
+    {
+      "contentType": "Article",
+      "identifier": "doi:10.1007/s42757-022-0139-5",
+      "language": "en",
+      "url": [
+        {
+          "format": "",
+          "platform": "",
+          "value": "http://dx.doi.org/10.1007/s42757-022-0139-5"
+        }
+      ],
+      "title": "Modelling of free bubble growth with Interface Capturing Computational Fluid Dynamics",
+      "creators": [
+        {
+          "creator": "Giustini, Giovanni"
+        },
+        {
+          "creator": "Issa, Raad I."
+        }
+      ],
+      "publicationName": "Experimental and Computational Multiphase Flow",
+      "openaccess": "true",
+      "doi": "10.1007/s42757-022-0139-5",
+      "publisher": "Springer",
+      "publicationDate": "2023-12-01",
+      "publicationType": "Journal",
+      "issn": "2661-8877",
+      "volume": "5",
+      "number": "4",
+      "genre": [
+        "OriginalPaper",
+        "Research Article"
+      ],
+      "startingPage": "357",
+      "endingPage": "364",
+      "journalId": "42757",
+      "copyright": "©2022 The Author(s)",
+      "abstract": "This paper presents simulations of the growth of stationary and rising vapour bubbles in an extend pool of liquid using an Interface Capturing Computational Fluid Dynamics (CFD) methodology coupled with a method for simulating interfacial mass transfer at the vapour-liquid interface. The model enables mechanistic prediction of the local rate of phase change at the vapour-liquid interface and is applicable to realistic cases involving two-phase mixtures with large density ratios. The simulation methodology is based on the Volume of Fluid (VOF) representation of the flow, whereby an interfacial region in which mass transfer occurs is implicitly identified by a phase indicator, in this case the volume fraction of liquid, which varies from the value pertaining to the “bulk” liquid to the value of the bulk vapour. The novel methodology proposed here has been implemented using the Finite Volume framework and solution methods typical of “industrial” CFD practice embedded in the OpenFOAM CFD toolbox. Simulations are validated via comparison against experimental observations of spherical bubble growth in zero gravity and of the growth of a rising bubble in normal gravity. The validation cases represent a severe test for Interface Capturing methodologies due to large density ratios, the presence of strong interfacial evaporation and upward bubble rise motion. Agreement of simulation results with measurements available in the literature demonstrates that the methodology detailed herein is applicable to modelling bubble growth driven by phase-change in real fluids.",
+      "subjects": [
+        "Engineering",
+        "Engineering Fluid Dynamics",
+        "Fluid- and Aerodynamics",
+        "Environmental Engineering/Biotechnology"
+      ]
+    },
+    {
+      "contentType": "Article",
+      "identifier": "doi:10.1007/s42757-022-0156-4",
+      "language": "en",
+      "url": [
+        {
+          "format": "",
+          "platform": "",
+          "value": "http://dx.doi.org/10.1007/s42757-022-0156-4"
+        }
+      ],
+      "title": "Experimental and numerical study on the transport of dilute bubbles in a T-junction channel flow",
+      "creators": [
+        {
+          "creator": "Frense, Erik"
+        },
+        {
+          "creator": "Yang, Xinghao"
+        },
+        {
+          "creator": "Rüdiger, Frank"
+        },
+        {
+          "creator": "Mühlhausen, Mark-Patrick"
+        },
+        {
+          "creator": "Fröhlich, Jochen"
+        }
+      ],
+      "publicationName": "Experimental and Computational Multiphase Flow",
+      "openaccess": "true",
+      "doi": "10.1007/s42757-022-0156-4",
+      "publisher": "Springer",
+      "publicationDate": "2023-12-01",
+      "publicationType": "Journal",
+      "issn": "2661-8877",
+      "volume": "5",
+      "number": "4",
+      "genre": [
+        "OriginalPaper",
+        "Research Article"
+      ],
+      "startingPage": "396",
+      "endingPage": "410",
+      "journalId": "42757",
+      "copyright": "©2023 The Author(s)",
+      "abstract": "The present study investigates the transport of dilute bubbles by transitional flow in a joining, cross-flow-type T-junction channel geometry with Reynolds numbers at the outlet branch from Re 3 = 600 to 1800 and an inlet volume flow rate ratio of 1. Bubbles with diameters between d b = 400 and 600 µm are considered. The schematic pattern of the single-phase flow is introduced based on streakline dye visualizations. Complex 3D flow due to the narrow channel design dominates the recirculation area and flow instabilities become important with increasing Reynolds number, which can be observed by the fading of dye intensity. A numerical method is presented with unsteady boundary conditions based on laser Doppler velocimetry measurements. Bubble trajectories are obtained by an Euler-Lagrange approach. Using high-speed shadowgraphy method combined with image processing, bubble sizes were measured, and bubble trajectories were evaluated. Experimental bubble trajectories and numerically predicted bubble positions show good agreement for Re 3 = 600, which is also the case with the dye visualization image. For higher Reynolds numbers, measurements of the bubble trajectories are reported and compared to dye visualization images. The increasing flow instabilities influence the bubble transport, resulting in large variations of bubble locations.",
+      "subjects": [
+        "Engineering",
+        "Engineering Fluid Dynamics",
+        "Fluid- and Aerodynamics",
+        "Environmental Engineering/Biotechnology"
+      ]
+    },
+    {
+      "contentType": "Article",
+      "identifier": "doi:10.1007/s42757-022-0144-8",
+      "language": "en",
+      "url": [
+        {
+          "format": "",
+          "platform": "",
+          "value": "http://dx.doi.org/10.1007/s42757-022-0144-8"
+        }
+      ],
+      "title": "Experimental and numerical study of free-falling streams of particles impacting an inclined surface",
+      "creators": [
+        {
+          "creator": "Dodds, David"
+        },
+        {
+          "creator": "Sarhan, Abd Alhamid Rafea"
+        },
+        {
+          "creator": "Naser, Jamal"
+        }
+      ],
+      "publicationName": "Experimental and Computational Multiphase Flow",
+      "openaccess": "true",
+      "doi": "10.1007/s42757-022-0144-8",
+      "publisher": "Springer",
+      "publicationDate": "2023-12-01",
+      "publicationType": "Journal",
+      "issn": "2661-8877",
+      "volume": "5",
+      "number": "4",
+      "genre": [
+        "OriginalPaper",
+        "Research Article"
+      ],
+      "startingPage": "381",
+      "endingPage": "395",
+      "journalId": "42757",
+      "copyright": "©2022 The Author(s)",
+      "abstract": "This paper presents a detailed experimental and numerical analysis of free-falling particle streams impacting a 45° inclined surface of differing materials. The particles used in this study were glass spheres with average diameters of 136 and 342 µm and a density of 2500 kg/m 3 . The three mass flow rates considered are 50, 150, and 250 grams per minute (gpm). The effect of wall material on the collision process was also analysed. Special attention was paid to the influence of wall roughness. Therefore, a plate of stainless steel with polished surface, an aluminium sheet, and a Perspex plate with similar properties to those of the rest of the wall sections were used. The experimental data were used to improve and validate a wall collision model in the frame of the Lagrangian approach. A new drag force formula that includes the effects of particle concentration as well as particle Reynolds number was implemented into commercially available codes from CFX4-4 package. It was found that the improved CFD model better predicted the experimental measurements for the particle rebound properties. The rough-wall model in these results showed greater effect on smaller particles than on larger particles. The results also showed that the improved CFD model predicted the velocity changes slightly better than the standard model, and this was confirmed by both the quantitative velocity comparisons and the qualitative concentration plots. Finally, the inclusion of the particle-particle collision was shown to be the dominant factor in providing the dispersion of the particles post collision. Without a sufficient particle-particle collision model, the standard model showed all particles behaving virtually identical, with the main particle stream continuing after the collision process.",
+      "subjects": [
+        "Engineering",
+        "Engineering Fluid Dynamics",
+        "Fluid- and Aerodynamics",
+        "Environmental Engineering/Biotechnology"
+      ]
+    },
+    {
+      "contentType": "Article",
+      "identifier": "doi:10.1007/s42757-022-0152-8",
+      "language": "en",
+      "url": [
+        {
+          "format": "",
+          "platform": "",
+          "value": "http://dx.doi.org/10.1007/s42757-022-0152-8"
+        }
+      ],
+      "title": "Modeling condensing flows of humid air in transonic nozzles",
+      "creators": [
+        {
+          "creator": "Hertwig, Tim"
+        },
+        {
+          "creator": "Wittmann, Tim"
+        },
+        {
+          "creator": "Wiśniewski, Piotr"
+        },
+        {
+          "creator": "Friedrichs, Jens"
+        }
+      ],
+      "publicationName": "Experimental and Computational Multiphase Flow",
+      "openaccess": "true",
+      "doi": "10.1007/s42757-022-0152-8",
+      "publisher": "Springer",
+      "publicationDate": "2023-12-01",
+      "publicationType": "Journal",
+      "issn": "2661-8877",
+      "volume": "5",
+      "number": "4",
+      "genre": [
+        "OriginalPaper",
+        "Research Article"
+      ],
+      "startingPage": "344",
+      "endingPage": "356",
+      "journalId": "42757",
+      "copyright": "©2023 The Author(s)",
+      "abstract": "The ability to accurately model condensing flows is crucial for understanding such flows in many applications. Condensing flows of pure steam have been studied extensively in the past, and several droplet growth models have been derived. The rationale for the choice of growth models for condensation in humid air is less established. Furthermore, only a few validation cases for condensation in such flows exist. This paper aims to identify existing limitations of common droplet growth laws. The Hertz—Knudsen model is compared to heat-transfer-based models by Gyarmathy and Young, using an Euler—Lagrange approach in Ansys Fluent. For this, an adaption for Young’s growth law is introduced, allowing its application in condensation of different gas mixtures. The numerical model has been validated and applied to flows in nozzles and turbines in previous publications. The accuracy of the droplet growth models is investigated in transonic nozzle test cases. A case with pure steam and a case with humid air at two different humidity values are considered. Finally, the influence of humidity, Knudsen number, and droplet radius on the growth rate of each model is shown analytically. Flows at lower humidity values with longer condensation zones are shown to benefit from the higher sensitivity of the Hertz—Knudsen model to the mass fraction of water vapor in the flow. Heat-transfer-based models tend to overestimate condensation in such flows. However, the ability to empirically adapt the growth model by Young and its applicability in different Knudsen numbers results in good agreement with validation data over a wide range of cases.",
+      "subjects": [
+        "Engineering",
+        "Engineering Fluid Dynamics",
+        "Fluid- and Aerodynamics",
+        "Environmental Engineering/Biotechnology"
+      ]
+    },
+    {
+      "contentType": "Article",
+      "identifier": "doi:10.1134/S1061830923700274",
+      "language": "en",
+      "url": [
+        {
+          "format": "",
+          "platform": "",
+          "value": "http://dx.doi.org/10.1134/S1061830923700274"
+        }
+      ],
+      "title": "On the Solution to One Problem of Magnetostatics for a Pipe with Inner Surface Defect",
+      "creators": [
+        {
+          "creator": "Dyakin, V. V."
+        },
+        {
+          "creator": "Kudryashova, O. V."
+        },
+        {
+          "creator": "Rayevskii, V. Ya."
+        }
+      ],
+      "publicationName": "Russian Journal of Nondestructive Testing",
+      "openaccess": "false",
+      "doi": "10.1134/S1061830923700274",
+      "publisher": "Springer",
+      "publicationDate": "2023-12-01",
+      "publicationType": "Journal",
+      "issn": "1608-3385",
+      "volume": "59",
+      "number": "2",
+      "genre": [
+        "OriginalPaper",
+        "ELECTROMAGNETIC \nMETHODS"
+      ],
+      "startingPage": "204",
+      "endingPage": "214",
+      "journalId": "11181",
+      "copyright": "©2023 Pleiades Publishing, Ltd.",
+      "abstract": "Abstract An algorithm has been developed and implemented for the numerical solution of a direct linear magnetostatics problem by calculating the resulting field of a pipe with a surface defect on its inner wall under the assumption that the perpendicular section of the pipe and the vector of intensity of the external magnetizing field remain unchanged along the pipe length axis. This has made it possible to take the two-dimensional integro-differential equation of magnetostatics as a basis. The algorithm is implemented in the FORTRAN programming language. The results are tested for reliability using problems solved exactly. Illustrative curves are constructed. The possibilities of applying the obtained calculation methodology to a class of problems that differ in some way in their formulation are indicated.",
+      "subjects": [
+        "Materials Science",
+        "Characterization and Evaluation of Materials",
+        "Structural Materials"
+      ]
+    },
+    {
+      "contentType": "Article",
+      "identifier": "doi:10.1007/s11307-022-01785-3",
+      "language": "en",
+      "url": [
+        {
+          "format": "",
+          "platform": "",
+          "value": "http://dx.doi.org/10.1007/s11307-022-01785-3"
+        }
+      ],
+      "title": "Contrast Media Research Symposium 2022",
+      "publicationName": "Molecular Imaging and Biology",
+      "openaccess": "false",
+      "doi": "10.1007/s11307-022-01785-3",
+      "publisher": "Springer",
+      "publicationDate": "2023-12-01",
+      "publicationType": "Journal",
+      "issn": "1860-2002",
+      "volume": "24",
+      "number": "1",
+      "genre": [
+        "News",
+        "Abstracts"
+      ],
+      "startingPage": "1",
+      "endingPage": "61",
+      "journalId": "11307",
+      "copyright": "©2022 The Author(s), under exclusive licence to World Molecular Imaging Society",
+      "abstract": "",
+      "subjects": [
+        "Medicine & Public Health",
+        "Imaging / Radiology"
+      ]
+    },
+    {
+      "contentType": "Article",
+      "identifier": "doi:10.1007/s40868-022-00121-2",
+      "language": "en",
+      "url": [
+        {
+          "format": "",
+          "platform": "",
+          "value": "http://dx.doi.org/10.1007/s40868-022-00121-2"
+        }
+      ],
+      "title": "Experimental study of an oscillating water column wave energy converter based on regular waves",
+      "creators": [
+        {
+          "ORCID": "0000-0002-0126-5823",
+          "creator": "EL Bouji, Soufiane"
+        },
+        {
+          "creator": "Kamil, Noureddine"
+        },
+        {
+          "creator": "Beidouri, Zitouni"
+        }
+      ],
+      "publicationName": "Marine Systems & Ocean Technology",
+      "openaccess": "false",
+      "doi": "10.1007/s40868-022-00121-2",
+      "publisher": "Springer",
+      "publicationDate": "2023-12-01",
+      "publicationType": "Journal",
+      "issn": "2199-4749",
+      "volume": "17",
+      "number": "3-4",
+      "genre": [
+        "OriginalPaper",
+        "Original Paper"
+      ],
+      "startingPage": "147",
+      "endingPage": "163",
+      "journalId": "40868",
+      "copyright": "©2022 The Author(s), under exclusive licence to Sociedade Brasileira de Engenharia Naval",
+      "abstract": "Increasingly, marine renewable energies are taking over as one of the most relevant solutions to minimize dependence on fossil fuels. The management and exploitation of such energy requires the optimization of converters that will, later on, ensure the conversion of hydraulic energy into electrical energy; among these converters are the oscillating water column. An OWC is characterized by its simplicity and its effectiveness against turbulent ocean conditions. The performance of OWCs depends strongly on the geometrical parameters of the air chamber such as: chamber walls, width, thickness of the front wall, slope at the bottom of the chamber and size of the opening. In this sense, the manuscript presents a parametric approach to investigate, by experimental tests, the hydrodynamic properties and the performance of oscillating water column wave energy converter (OWC). The effects of some geometrical key parameters of the system are analyzed. The tests are carried out on a small‐size OWC. The work seems to be interesting in view of its experimental aspect. We have realized a prototype of an oscillating water column (OWC) which consists of a box (an air chamber) having the shape of parallelepipeds. The experimental results found by this study showed different optimums of: (a) the distance between the wave generator and the device (2 positions). (b) The depth of water in the hydraulic channel. (c) The immersion depth of the front wall of the chamber. (d) The opening at the bottom of the prototype. The results obtained show that the coupling of the geometrical parameters of the device and the conditions of installation leads to an improvement of the hydrodynamic performances of the OWC. The study also shows that the various optimums found give a considerable increase in the energy output.",
+      "subjects": [
+        "Engineering",
+        "Offshore Engineering"
+      ]
+    },
+    {
+      "contentType": "Article",
+      "identifier": "doi:10.1007/s42757-022-0150-x",
+      "language": "en",
+      "url": [
+        {
+          "format": "",
+          "platform": "",
+          "value": "http://dx.doi.org/10.1007/s42757-022-0150-x"
+        }
+      ],
+      "title": "Development of a multiphase perfusion model for biomimetic reduced-order dense tumors",
+      "creators": [
+        {
+          "creator": "Akash, Mohammad Mehedi Hasan"
+        },
+        {
+          "creator": "Chakraborty, Nilotpal"
+        },
+        {
+          "creator": "Mohammad, Jiyan"
+        },
+        {
+          "creator": "Reindl, Katie"
+        },
+        {
+          "creator": "Basu, Saikat"
+        }
+      ],
+      "publicationName": "Experimental and Computational Multiphase Flow",
+      "openaccess": "true",
+      "doi": "10.1007/s42757-022-0150-x",
+      "publisher": "Springer",
+      "publicationDate": "2023-09-01",
+      "publicationType": "Journal",
+      "issn": "2661-8877",
+      "volume": "5",
+      "number": "3",
+      "genre": [
+        "OriginalPaper",
+        "Research Article"
+      ],
+      "startingPage": "319",
+      "endingPage": "329",
+      "journalId": "42757",
+      "copyright": "©2023 The Author(s)",
+      "abstract": "Dense fibrous extracellular constitution of solid tumors exerts high resistance to diffusive transport into it; additionally, the scarcity of blood and lymphatic flows hinders convection. The complexity of fluidic transport mechanisms in such tumor environments still presents open questions with translational end goals. For example, clinical diagnosis and targeted drug delivery platforms for such dense tumors can ideally benefit from a quantitative framework on plasma uptake into the tumor. In this study, we present a computational model for physical parameters that may influence blood percolation and penetration into simple biomimetic solid tumor geometry. The model implements three-phase viscous-laminar transient simulation to mimic the transport physics inside a tumor-adhering blood vessel and measures the constituent volume fractions of the three considered phases, viz. plasma, RBCs (red blood cells, also known as “erythrocytes”), and WBCs (white blood cells, also known as “leukocytes”) at three different flow times, while simultaneously recording the plasma pressure and velocity at the entry point to the tumor’s extracellular space. Subsequently, to quantify plasma perfusion within the tumor zone, we proposed a reduced-order two-dimensional transport model for the tumor entry zone and its extracellular space for three different fenestra diameters: 0.1, 0.3, and 0.5 µm; the simulations were two-phase viscous-laminar transient. The findings support the hypothesis that plasma percolation into the tumor is proportional to the leakiness modulated by the size of fenestra openings, and the rate of percolation decays with the diffusion distance.",
+      "subjects": [
+        "Engineering",
+        "Engineering Fluid Dynamics",
+        "Fluid- and Aerodynamics",
+        "Environmental Engineering/Biotechnology"
+      ]
+    },
+    {
+      "contentType": "Article",
+      "identifier": "doi:10.1007/s41095-022-0304-6",
+      "language": "en",
+      "url": [
+        {
+          "format": "",
+          "platform": "",
+          "value": "http://dx.doi.org/10.1007/s41095-022-0304-6"
+        }
+      ],
+      "title": "Correlation-aware probabilistic data summarization for large-scale multi-block scientific data visualization",
+      "creators": [
+        {
+          "creator": "Yang, Yang"
+        },
+        {
+          "creator": "Lu, Kecheng"
+        },
+        {
+          "creator": "Wu, Yu"
+        },
+        {
+          "creator": "Wang, Yunhai"
+        },
+        {
+          "creator": "Cao, Yi"
+        }
+      ],
+      "publicationName": "Computational Visual Media",
+      "openaccess": "true",
+      "doi": "10.1007/s41095-022-0304-6",
+      "publisher": "Springer",
+      "publicationDate": "2023-09-01",
+      "publicationType": "Journal",
+      "issn": "2096-0662",
+      "volume": "9",
+      "number": "3",
+      "genre": [
+        "OriginalPaper",
+        "Research Article"
+      ],
+      "startingPage": "513",
+      "endingPage": "529",
+      "journalId": "41095",
+      "copyright": "©2023 The Author(s)",
+      "abstract": "In this paper, we propose a correlation-aware probabilistic data summarization technique to efficiently analyze and visualize large-scale multi-block volume data generated by massively parallel scientific simulations. The core of our technique is correlation modeling of distribution representations of adjacent data blocks using copula functions and accurate data value estimation by combining numerical information, spatial location, and correlation distribution using Bayes’ rule. This effectively preserves statistical properties without merging data blocks in different parallel computing nodes and repartitioning them, thus significantly reducing the computational cost. Furthermore, this enables reconstruction of the original data more accurately than existing methods. We demonstrate the effectiveness of our technique using six datasets, with the largest having one billion grid points. The experimental results show that our approach reduces the data storage cost by approximately one order of magnitude compared to state-of-the-art methods while providing a higher reconstruction accuracy at a lower computational cost.",
+      "subjects": [
+        "Computer Science",
+        "Computer Graphics",
+        "User Interfaces and Human Computer Interaction",
+        "Artificial Intelligence",
+        "Image Processing and Computer Vision"
+      ]
+    }
+  ],
+  "facets": [
+    {
+      "name": "subject",
+      "values": [
+        {
+          "value": "Physics",
+          "count": "1130498"
+        },
+        {
+          "value": "Physics, general",
+          "count": "315403"
+        },
+        {
+          "value": "Engineering",
+          "count": "315392"
+        },
+        {
+          "value": "Characterization and Evaluation of Materials",
+          "count": "290667"
+        },
+        {
+          "value": "Physical Chemistry",
+          "count": "239452"
+        },
+        {
+          "value": "Materials Science",
+          "count": "238082"
+        },
+        {
+          "value": "Condensed Matter Physics",
+          "count": "210305"
+        },
+        {
+          "value": "Chemistry",
+          "count": "200464"
+        },
+        {
+          "value": "Theoretical, Mathematical and Computational Physics",
+          "count": "197463"
+        },
+        {
+          "value": "Nanotechnology",
+          "count": "188636"
+        },
+        {
+          "value": "Materials Science, general",
+          "count": "183624"
+        },
+        {
+          "value": "Inorganic Chemistry",
+          "count": "175458"
+        },
+        {
+          "value": "Nuclear Physics, Heavy Ions, Hadrons",
+          "count": "174024"
+        },
+        {
+          "value": "Science, Humanities and Social Sciences, multidisciplinary",
+          "count": "171842"
+        },
+        {
+          "value": "Mathematics",
+          "count": "168153"
+        },
+        {
+          "value": "Science, multidisciplinary",
+          "count": "147252"
+        },
+        {
+          "value": "Classical Mechanics",
+          "count": "144650"
+        },
+        {
+          "value": "Applied and Technical Physics",
+          "count": "135150"
+        },
+        {
+          "value": "Solid State Physics",
+          "count": "133295"
+        },
+        {
+          "value": "Classical and Continuum Physics",
+          "count": "129524"
+        }
+      ]
+    },
+    {
+      "name": "keyword",
+      "values": [
+        {
+          "value": "Physical Chemistry",
+          "count": "33155"
+        },
+        {
+          "value": "nuclear magnetic resonance",
+          "count": "28215"
+        },
+        {
+          "value": "Analytical Chemistry",
+          "count": "26002"
+        },
+        {
+          "value": "NMR",
+          "count": "25401"
+        },
+        {
+          "value": "Statistical Physic",
+          "count": "15846"
+        },
+        {
+          "value": "Inorganic Chemistry",
+          "count": "15190"
+        },
+        {
+          "value": "Elementary Particle",
+          "count": "15078"
+        },
+        {
+          "value": "Spectroscopy",
+          "count": "12638"
+        },
+        {
+          "value": "Neural Network",
+          "count": "11911"
+        },
+        {
+          "value": "chemical shift",
+          "count": "11462"
+        },
+        {
+          "value": "nucleon separation energy",
+          "count": "11292"
+        },
+        {
+          "value": "nucleon residual interaction parameter",
+          "count": "11287"
+        },
+        {
+          "value": "mass excess",
+          "count": "11206"
+        },
+        {
+          "value": "atomic mass",
+          "count": "11192"
+        },
+        {
+          "value": "Q-value",
+          "count": "11190"
+        },
+        {
+          "value": "nuclear binding energy",
+          "count": "11189"
+        },
+        {
+          "value": "Polymer",
+          "count": "10668"
+        },
+        {
+          "value": "Field Theory",
+          "count": "10389"
+        },
+        {
+          "value": "Molecular Structure",
+          "count": "10341"
+        },
+        {
+          "value": "Radiation",
+          "count": "9958"
+        }
+      ]
+    },
+    {
+      "name": "pub",
+      "values": [
+        {
+          "value": "Nature",
+          "count": "99590"
+        },
+        {
+          "value": "MRS Online Proceedings Library",
+          "count": "70638"
+        },
+        {
+          "value": "Scientific Reports",
+          "count": "32345"
+        },
+        {
+          "value": "Journal of High Energy Physics",
+          "count": "28605"
+        },
+        {
+          "value": "Measurement Techniques",
+          "count": "22179"
+        },
+        {
+          "value": "Journal of Radioanalytical and Nuclear Chemistry",
+          "count": "21098"
+        },
+        {
+          "value": "Applied Physics A",
+          "count": "20041"
+        },
+        {
+          "value": "Astrophysics and Space Science",
+          "count": "18922"
+        },
+        {
+          "value": "JOM",
+          "count": "17131"
+        },
+        {
+          "value": "Journal of Electronic Materials",
+          "count": "15855"
+        },
+        {
+          "value": "Journal of Applied Spectroscopy",
+          "count": "14915"
+        },
+        {
+          "value": "Journal of Materials Research",
+          "count": "14608"
+        },
+        {
+          "value": "Nature Communications",
+          "count": "14172"
+        },
+        {
+          "value": "Zeitschrift für Physik",
+          "count": "13153"
+        },
+        {
+          "value": "Journal of Structural Chemistry",
+          "count": "12396"
+        },
+        {
+          "value": "Solar Physics",
+          "count": "11829"
+        },
+        {
+          "value": "Communications in Mathematical Physics",
+          "count": "11697"
+        },
+        {
+          "value": "The European Physical Journal C",
+          "count": "11541"
+        },
+        {
+          "value": "Journal of Statistical Physics",
+          "count": "11112"
+        },
+        {
+          "value": "Applied Physics B",
+          "count": "10933"
+        }
+      ]
+    },
+    {
+      "name": "year",
+      "values": [
+        {
+          "value": "2023",
+          "count": "59688"
+        },
+        {
+          "value": "2022",
+          "count": "113843"
+        },
+        {
+          "value": "2021",
+          "count": "119245"
+        },
+        {
+          "value": "2020",
+          "count": "115827"
+        },
+        {
+          "value": "2019",
+          "count": "109106"
+        },
+        {
+          "value": "2018",
+          "count": "106254"
+        },
+        {
+          "value": "2017",
+          "count": "101086"
+        },
+        {
+          "value": "2016",
+          "count": "96385"
+        },
+        {
+          "value": "2015",
+          "count": "90992"
+        },
+        {
+          "value": "2014",
+          "count": "91245"
+        },
+        {
+          "value": "2013",
+          "count": "85058"
+        },
+        {
+          "value": "2012",
+          "count": "76926"
+        },
+        {
+          "value": "2011",
+          "count": "78148"
+        },
+        {
+          "value": "2010",
+          "count": "72858"
+        },
+        {
+          "value": "2009",
+          "count": "82048"
+        },
+        {
+          "value": "2008",
+          "count": "70974"
+        },
+        {
+          "value": "2007",
+          "count": "76993"
+        },
+        {
+          "value": "2006",
+          "count": "52203"
+        },
+        {
+          "value": "2005",
+          "count": "45909"
+        },
+        {
+          "value": "2004",
+          "count": "51881"
+        }
+      ]
+    },
+    {
+      "name": "country",
+      "values": [
+        {
+          "value": "United States",
+          "count": "507226"
+        },
+        {
+          "value": "Germany",
+          "count": "306717"
+        },
+        {
+          "value": "Russia",
+          "count": "305944"
+        },
+        {
+          "value": "China",
+          "count": "248756"
+        },
+        {
+          "value": "India",
+          "count": "184920"
+        },
+        {
+          "value": "United Kingdom",
+          "count": "152347"
+        },
+        {
+          "value": "France",
+          "count": "142254"
+        },
+        {
+          "value": "Japan",
+          "count": "112812"
+        },
+        {
+          "value": "Italy",
+          "count": "110612"
+        },
+        {
+          "value": "Canada",
+          "count": "68409"
+        },
+        {
+          "value": "Switzerland",
+          "count": "57515"
+        },
+        {
+          "value": "Spain",
+          "count": "51987"
+        },
+        {
+          "value": "Netherlands",
+          "count": "46385"
+        },
+        {
+          "value": "Australia",
+          "count": "46021"
+        },
+        {
+          "value": "Poland",
+          "count": "42748"
+        },
+        {
+          "value": "South Korea",
+          "count": "39315"
+        },
+        {
+          "value": "Ukraine",
+          "count": "38252"
+        },
+        {
+          "value": "Brazil",
+          "count": "33414"
+        },
+        {
+          "value": "Sweden",
+          "count": "32101"
+        },
+        {
+          "value": "Czech Republic",
+          "count": "32051"
+        }
+      ]
+    },
+    {
+      "name": "type",
+      "values": [
+        {
+          "value": "Journal",
+          "count": "1768246"
+        },
+        {
+          "value": "Book",
+          "count": "1018803"
+        }
+      ]
+    }
+  ]
+}

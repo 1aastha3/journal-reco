@@ -35,7 +35,7 @@ const Home = () => {
         borderWidth="1px"
       >
         <Text fontSize="4xl" fontFamily="sans serif" as='b'>
-          .getJournal()
+          IEEE/Springer Paper Recommendation
         </Text>
         </Box>
         <br></br>

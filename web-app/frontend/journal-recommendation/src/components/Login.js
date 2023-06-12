@@ -3,7 +3,6 @@ import { Button } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-import { response } from 'express'
 
 const Login = () => {
   const [show, setShow] = useState(false)

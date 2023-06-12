@@ -28,15 +28,16 @@ const Login = () => {
     }
 
     try {
+
       const config = {
-        headers: {"Content-type" : "application/json"},
+        headers: {"Content-Type" : "application/json"},
       }
       const { data } = await axios.post(
         "http://localhost:3001/api/user/login",
         { email, password },
         config
       )
-    const { userId } = data.data._id
+      const userId  = data._id
       
       console.log(JSON.stringify(data))
       toast({
@@ -53,7 +54,7 @@ const Login = () => {
     } catch (error) {
       toast({
         title: "Error Occured!",
-        description: error.response.data.message,
+        description: "message",
         status: "error",
         duration: 5000,
         isClosable: true,

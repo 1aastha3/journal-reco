@@ -2,18 +2,27 @@ import React, { useEffect, useState } from 'react'
 import {Box, CloseButton, Flex, Input} from '@chakra-ui/react'
 import axios from 'axios'
 
-const Dashboard = ({userId}) => {
+const Dashboard = () => {
   
   const [interests, setInterests] = useState([])
   const [currentTag, setCurrentTag] = useState('')
+  const [userId, setUserId] = useState('')
 
   useEffect(() => {
-    fetchInterests()
-  }, [])
+  const storedUserId = localStorage.getItem('userId');
+  setUserId(storedUserId);
+}, []);
 
+useEffect(() => {
+  if (userId) {
+    fetchInterests();
+  }
+}, [userId]);
+
+    const uid = userId
   const fetchInterests = async () => {
     try {
-      const res = await axios.get(`http://localhost:3001/api/user/${userId}interest`)
+      const res = await axios.get(`http://localhost:3001/api/user/${uid}/interest`)
 
       const fetched = res.data
       setInterests(fetched)
@@ -25,7 +34,7 @@ const Dashboard = ({userId}) => {
 
   const handleTagChange = (e) => {
     setCurrentTag(e.target.value)
-    console.log(e.target.value);
+
   }
 
   const handleTagKeyPress = (e) => {
@@ -39,7 +48,7 @@ const Dashboard = ({userId}) => {
   const displayTag = async (tag) => {
     try {
       const newInterests = [...interests, tag]
-      await axios.post(`http://localhost:3001/api/user/${userId}interest`, { interests: newInterests })
+      await axios.post(`http://localhost:3001/api/user/${uid}/interest`, { interests: newInterests })
       setInterests(newInterests)
 
     } catch (error) {
@@ -48,10 +57,11 @@ const Dashboard = ({userId}) => {
   }
 
   const deleteTag = async (index) => {
+    console.log(index);
     try {
       const newInterests = [...interests]
       newInterests.splice(index, 1)
-      await axios.put(`http://localhost:3001/api/user/${userId}interest`, { interests: newInterests })
+      await axios.put(`http://localhost:3001/api/user/${uid}/interest`, { interests: newInterests })
       setInterests(newInterests)
     } catch (error) {
       console.log('Could not remove tag, try again!');
@@ -66,9 +76,12 @@ const Dashboard = ({userId}) => {
           value={currentTag}
           onChange={handleTagChange}
           onKeyPress={handleTagKeyPress}
+          marginTop='40vh'
+          w='50%'
+          fontSize='1.5rem'
           mb={4}
         />
-        <Flex flexWrap="wrap">
+        <Flex flexWrap="wrap" marginLeft='30vw' marginRight='30vw'>
           {interests.map((tag, index) => (
             <Box
               key={index}

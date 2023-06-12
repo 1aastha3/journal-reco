@@ -4,7 +4,7 @@ const getInterest = async (req, res) => {
     const uid = req.params.userId
 
     try {
-        const user = await User.findByOne(uid)
+        const user = await User.findOne({_id : uid})
         if (!user)
         {
             res.status(400)
@@ -13,7 +13,7 @@ const getInterest = async (req, res) => {
         }
 
         res.status(200)
-        res.json("user.interest")
+        res.json(user.interests)
 
     } catch (error) {
         console.log('Could not get interests');

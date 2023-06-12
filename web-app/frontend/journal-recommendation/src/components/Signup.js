@@ -5,13 +5,13 @@ import React, { useState } from 'react'
 const Signup = () => {
   const toast = useToast() 
 
+
   const [show, setShow] = useState(false)
   const [show1, setShow1] = useState(false)
   const [name, setName] = useState()
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
   const [confirmpassword, setConfirmpassword] = useState()
-  const [loading, setLoading] = useState(false)
 
   const handleClick = () => setShow(!show)
   const handleClick1 = () => setShow1(!show1)
@@ -61,6 +61,8 @@ const Signup = () => {
         isClosable: true,
         position: "bottom",
       })
+        
+      
       localStorage.setItem("userInfo", JSON.stringify(data));
     } catch (error) {
       console.log(error)

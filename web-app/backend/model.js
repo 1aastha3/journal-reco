@@ -17,6 +17,11 @@ const userSchema = mongoose.Schema(
             unique: true,
             required : true
         },
+
+        interests: {
+            type: [String],
+            default : []
+        },
         
         signUp: {
             type: Date,

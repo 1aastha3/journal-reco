@@ -3,10 +3,16 @@ const express = require("express")
 const router = express.Router()
 const { registerUser } = require("../Controllers/registerUser")
 const { authUser } = require("../Controllers/authUser")
+const { addInterest } = require("../Controllers/userInterest.js/addInterest")
+const { getInterest } = require("../Controllers/userInterest.js/getInterest")
+const { updateInterest } = require("../Controllers/userInterest.js/updateInterest")
 
 router.use(express.json()) // express middleware to parse the incoming josn request to pyt on req.body
 
 router.route('/').post(registerUser)
 router.post('/login', authUser) 
+router.post('/:userId/interest', addInterest)
+router.get('/:userId/interest', getInterest)
+router.put('/:userId/interest', updateInterest)
 
 module.exports =  router 

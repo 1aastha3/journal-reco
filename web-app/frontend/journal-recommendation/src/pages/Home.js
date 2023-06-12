@@ -13,6 +13,8 @@ import Login from '../components/Login'
 import Signup from '../components/Signup'
 import { useEffect } from 'react'
 
+// start page needs to navigate to the dashboard automatically once sign up is successful
+
 const Home = () => {
 
   useEffect(() => {
@@ -38,7 +40,8 @@ const Home = () => {
         </Box>
         <br></br>
         <br></br>
-      <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
+        <br></br>
+      <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1.5px">
         <Tabs isFitted variant="soft-rounded">
           <TabList mb="1.5em">
             <Tab fontFamily='sans-serif' fontSize='xl'>Login</Tab>

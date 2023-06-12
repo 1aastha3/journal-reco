@@ -2,19 +2,20 @@ import { FormControl, FormLabel, Input, InputGroup, InputRightElement, VStack, u
 import { Button } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import axios from 'axios'
-
+import { useNavigate } from 'react-router-dom'
+import { response } from 'express'
 
 const Login = () => {
   const [show, setShow] = useState(false)
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
-  const [loading, setLoading] = useState(false)
 
   const toast = useToast()
+  const navigate = useNavigate();
 
   const handleClick = () => setShow(!show)
   const submitHandler = async () => {
-    setLoading(true)
+    
 
     if (!email || !password) {
       toast({
@@ -24,8 +25,6 @@ const Login = () => {
         isClosable: true,
         position: "bottom"
       })
-
-      setLoading(false)
       return
     }
 
@@ -38,6 +37,8 @@ const Login = () => {
         { email, password },
         config
       )
+    const { userId } = data.data._id
+      
       console.log(JSON.stringify(data))
       toast({
         title: "Login Successful",
@@ -46,9 +47,10 @@ const Login = () => {
         isClosable: true,
         position: "bottom",
       })
-
-      localStorage.setItem("userInfo", JSON.stringify(data))
-      setLoading(false)
+      navigate("/dashboard")
+      localStorage.setItem("userInfo", JSON.stringify(data)) // storing user object in the localstorage for
+      localStorage.setItem('userId', userId);
+      
     } catch (error) {
       toast({
         title: "Error Occured!",
@@ -58,7 +60,7 @@ const Login = () => {
         isClosable: true,
         position: "bottom",
       });
-      setLoading(false);
+     
     }
   }
   return (
@@ -94,7 +96,6 @@ const Login = () => {
         width="100%"
         style={{ marginTop: 15 }}
         onClick={submitHandler}
-        isLoading={loading}
       >
         Login
       </Button>

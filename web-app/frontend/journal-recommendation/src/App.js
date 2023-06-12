@@ -5,11 +5,12 @@ import Dashboard from './pages/Dashboard';
 
 
 function App() {
+  const userId = localStorage.getItem('userId')
   return (
     <div className="App">
       <Routes>
         <Route path = '/' Component={Home} />
-        <Route path='/dashboard' Component={Dashboard} />
+        <Route path='/dashboard' element={<Dashboard userId={userId} />}/>
       </Routes>
     </div>
   );

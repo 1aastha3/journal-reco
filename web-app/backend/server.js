@@ -16,6 +16,7 @@ app.use((req, res, next) => {
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   next();
 });
+
 // routes - api endpoints, a function is passed for what type of request in each path. that function is located in /backend/Routes
 // for each route there, a controller function is passed (a route handling function) and these are located in /backend/Controllers
 

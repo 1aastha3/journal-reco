@@ -1,6 +1,8 @@
 const User = require('../../model')
 
+
 const updateInterest = async (req, res) => {
+    console.log('deleting');
     const uid = req.params.userId
     const  interest  = req.body
     

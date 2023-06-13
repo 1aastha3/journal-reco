@@ -1,6 +1,7 @@
 const User = require("../../model")
 
-const addInterest = async(req, res) => {
+const addInterest = async (req, res) => {
+    console.log('adding');
     const uid = req.params.userId
     const interest = req.body
  

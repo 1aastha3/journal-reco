@@ -2,8 +2,11 @@ import key
 import json
 import pprint
 import requests
+import sys
 
-# Springer API key
+# added
+keywords = sys.argv[1:]
+print(keywords)
 springer_key :str = key.springer_key
 
 base_url :str = "https://api.springernature.com/metadata"

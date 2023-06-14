@@ -1,4 +1,5 @@
-const User = require('../../model')
+const User = require('../../model');
+const { getInterest } = require('./getInterest');
 
 
 const updateInterest = async (req, res) => {
@@ -23,8 +24,9 @@ const updateInterest = async (req, res) => {
             return // prone to mistake
         }
 
-        user.interests = user.interests.filter((existingInterest) => !interest.interests.includes(existingInterest));
+        user.interests = user.interests.filter((existingInterest) => interest.interests.includes(existingInterest));
         await user.save()
+  
         res.status(200).json(user.interests)
 
     } catch (error) {

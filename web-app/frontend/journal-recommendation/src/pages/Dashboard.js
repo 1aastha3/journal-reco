@@ -3,6 +3,7 @@ import {Box, CloseButton, Flex, Input} from '@chakra-ui/react'
 import axios from 'axios'
 
 
+
 const Dashboard = () => {
   
   const [interests, setInterests] = useState([])
@@ -56,6 +57,7 @@ useEffect(() => {
       const newInterests = [...interests, tag]
       await axios.post(`http://localhost:3001/api/user/${uid}/interest`, { interests: newInterests })
       setInterests(newInterests)
+      fetchInterests()
 
     } catch (error) {
       console.log('Could not add tag, try again!');
@@ -69,6 +71,7 @@ useEffect(() => {
       newInterests.splice(index, 1)
       await axios.put(`http://localhost:3001/api/user/${uid}/interest`, { interests: newInterests })
       setInterests(newInterests)
+      fetchInterests()
     } catch (error) {
       console.log('Could not remove tag, try again!');
     }

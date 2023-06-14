@@ -1,4 +1,5 @@
-const User = require("../../model")
+const User = require("../../model");
+const { getInterest } = require("./getInterest");
 
 const addInterest = async (req, res) => {
     console.log('adding');

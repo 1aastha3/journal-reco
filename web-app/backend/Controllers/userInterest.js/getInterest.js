@@ -1,4 +1,5 @@
 const User = require('../../model')
+
 const { spawn } = require('child_process')
 
 
@@ -21,6 +22,7 @@ const getInterest = async (req, res) => {
 
         // sending the array to python // added
         const keywords = user.interests
+<<<<<<< HEAD
         const pipInstall = spawn('./bin/pip', ["install"], "requests");
 
         pipInstall.stdout.on("end", () =>
@@ -36,6 +38,19 @@ const getInterest = async (req, res) => {
                 })
             }
         )
+=======
+        const sendToPython = spawn('python3', ['/Users/aasthaprajapati/Documents/Coding/Hackathon/journal-reco/api_testing/api_test.py', ...keywords, 5])
+        sendToPython.stdout.on('data', (data) => {
+
+            // const responseString = data.toString().replace(/^\(|\)$/g, "");
+            // const response = JSON.parse(responseString)
+
+            console.log(`Python Output ${data}`);
+        })
+        sendToPython.stderr.on('data', (data) => {
+            console.error(`python error: ${data}`)
+        })
+>>>>>>> d74b30f6b0843ef76deb28f4e4b7a4feaef550c0
 
     } catch (error) {
         console.log('Could not get interests');

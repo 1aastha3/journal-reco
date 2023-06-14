@@ -7,6 +7,7 @@ const authUser = async (req, res) => {
 
     const user = await User.findOne({ email });
     const userPassword = await User.findOne({ password });
+    
     if (user)
     {
         console.log("found the email")

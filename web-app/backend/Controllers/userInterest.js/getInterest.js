@@ -1,4 +1,5 @@
 const User = require('../../model')
+
 const { spawn } = require('child_process')
 
 
@@ -21,9 +22,13 @@ const getInterest = async (req, res) => {
 
         // sending the array to python // added
         const keywords = user.interests
-        const sendToPython = spawn('python', ['/Users/aasthaprajapati/Documents/Coding/Hackathon/journal-reco/api_testing', ...keywords])
+        const sendToPython = spawn('python3', ['/Users/aasthaprajapati/Documents/Coding/Hackathon/journal-reco/api_testing/api_test.py', ...keywords, 5])
         sendToPython.stdout.on('data', (data) => {
-            console.log(`Python output: ${data}`);
+
+            // const responseString = data.toString().replace(/^\(|\)$/g, "");
+            // const response = JSON.parse(responseString)
+
+            console.log(`Python Output ${data}`);
         })
         sendToPython.stderr.on('data', (data) => {
             console.error(`python error: ${data}`)

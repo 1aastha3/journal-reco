@@ -21,13 +21,21 @@ const getInterest = async (req, res) => {
 
         // sending the array to python // added
         const keywords = user.interests
-        const sendToPython = spawn('python', ['/Users/aasthaprajapati/Documents/Coding/Hackathon/journal-reco/api_testing', ...keywords])
-        sendToPython.stdout.on('data', (data) => {
-            console.log(`Python output: ${data}`);
-        })
-        sendToPython.stderr.on('data', (data) => {
-            console.error(`python error: ${data}`)
-        })
+        const pipInstall = spawn('./bin/pip', ["install"], "requests");
+
+        pipInstall.stdout.on("end", () =>
+            {
+                const sendToPython = spawn('./bin/python', ['/Users/aasthaprajapati/Documents/Coding/Hackathon/journal-reco/api_testing', ...keywords])
+
+                sendToPython.stdout.on('end', (data) => {
+                    //TODO: check the database if the field is updated or not
+                })
+
+                sendToPython.stderr.on('data', (data) => {
+                    console.error(`python error: ${data}`)
+                })
+            }
+        )
 
     } catch (error) {
         console.log('Could not get interests');

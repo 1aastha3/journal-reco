@@ -22,18 +22,22 @@ const getInterest = async (req, res) => {
 
         // sending the array to python // added
         const keywords = user.interests
-        const sendToPython = spawn('python3', ['/Users/aasthaprajapati/Documents/Coding/Hackathon/journal-reco/api_testing/api_test.py', ...keywords, 5])
-        sendToPython.stdout.on('data', (data) => {
 
+<<<<<<< HEAD
             const responseString = data.toString().replace(/^\(|\)$/g, "");
             const response = JSON.parse(responseString)
 
             console.log(`Python Output ${data}`);
+=======
+        const installDependencies = spawn("./bin/pip", ["install", "requests"]);
+        installDependencies.stdout.on("end", () => {
+            const sendToPython = spawn('./bin/python', ['/api.py', ...keywords])
+            sendToPython.stdout.on('end', () => {
+                console.log("Request sent to recommender")
+                //TODO: check if database has been updated or not
+            })
+>>>>>>> 29f1abb8df5ea107f21b0e966fd06cc8c644ca96
         })
-        sendToPython.stderr.on('data', (data) => {
-            console.error(`python error: ${data}`)
-        })
-
     } catch (error) {
         console.log('Could not get interests');
         res.status(400)

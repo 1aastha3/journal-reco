@@ -91,6 +91,7 @@ useEffect(() => {
           w='50%'
           fontSize='1.5rem'
           mb={4}
+          h='50px'
         />
         <Flex flexWrap="wrap" marginLeft='30vw' marginRight='30vw'>
           {interests.map((tag, index) => (
@@ -98,8 +99,10 @@ useEffect(() => {
               key={index}
               bg="blue.200"
               color="white"
+              fontSize='20px'
               p={2}
               borderRadius="md"
+              fontWeight='semibold'
               mr={2}
               mb={2}
               display="flex"
@@ -108,7 +111,7 @@ useEffect(() => {
               {tag}
               <CloseButton
                 size="sm"
-                ml={2}
+                ml={2.5}
                 onClick={() => deleteTag(index)}
               />
             </Box>

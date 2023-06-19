@@ -50,15 +50,15 @@ const Header = ({ userId }) => {
 
   return (
     <Flex textAlign="center" justify="space-between" p={4} bg='blue.300'>
-      <Text fontSize="2xl" fontWeight="bold" justifyI='center'>
-        Journal-Recommender
+      <Text fontSize="2xl" fontWeight="bold" justifyI='center' color='white'>
+        Journal-Recommender |
       </Text>
       <Flex align="center">
         <Menu>
           <MenuButton as={Avatar} size="sm" />
-          <MenuList>
-            <MenuItem onClick={handleLogout}>Logout</MenuItem>
-            <MenuItem onClick={handleMyRecommendations}>My Recommendations</MenuItem>
+          <MenuList >
+            <MenuItem onClick={handleLogout} fontSize='1.2rem' bg='blue.50'>Logout</MenuItem>
+            <MenuItem onClick={handleMyRecommendations} fontSize= '1.2rem' bg='blue.50'>My Recommendations</MenuItem>
           </MenuList>
         </Menu>
       </Flex>
@@ -71,7 +71,7 @@ const Header = ({ userId }) => {
             {recommendations.map((article, index) => (
               <div key={index}>
                 <h3>{article.title}</h3>
-                <a href={article.link} target="_blank" rel="noopener noreferrer">
+                <a href={article.url.value} target="_blank" rel="noopener noreferrer">
                   Click to read the article
                 </a>
                 <hr />

@@ -25,6 +25,7 @@ const userSchema = mongoose.Schema(
         
         signUp: {
             type: Date,
+            default: Date.now
         },
 
         lastMail: {
@@ -32,7 +33,15 @@ const userSchema = mongoose.Schema(
         },
 
         recommendedTillNow: [{
-            type: mongoose.Schema.Types.ObjectId,
+            identifier: {
+                type : mongoose.Schema.Types.ObjectId
+            },
+            url: {
+                type : String
+            },
+            title: {
+              type : String  
+            }
         }],
 
         toBeRecommended: [

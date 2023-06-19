@@ -27,6 +27,7 @@ const getInterest = async (req, res) => {
         installDependencies.stdout.on("end", () => {
             const sendToPython = spawn('python3', [`${process.cwd()}/backend/Controllers/userInterest.js/api.py`, ...keywords, uid])
             sendToPython.stdout.on('data', (data) => {
+                console.log('logging data now');
                 console.log(data.toString());
                 //TODO: check if database has been updated or not
             })

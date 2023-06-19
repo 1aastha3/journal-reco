@@ -25,8 +25,8 @@ const getInterest = async (req, res) => {
         const sendToPython = spawn('python3', ['/Users/aasthaprajapati/Documents/Coding/Hackathon/journal-reco/api_testing/api_test.py', ...keywords, 5])
         sendToPython.stdout.on('data', (data) => {
 
-            // const responseString = data.toString().replace(/^\(|\)$/g, "");
-            // const response = JSON.parse(responseString)
+            const responseString = data.toString().replace(/^\(|\)$/g, "");
+            const response = JSON.parse(responseString)
 
             console.log(`Python Output ${data}`);
         })

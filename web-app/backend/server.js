@@ -21,8 +21,6 @@ app.use((req, res, next) => {
 // for each route there, a controller function is passed (a route handling function) and these are located in /backend/Controllers
 
 app.use("/api/user", userRoutes)
-// more routes for recommendation and journal apis
-
 
 
 // server start

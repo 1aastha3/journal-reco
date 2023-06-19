@@ -33,7 +33,13 @@ const userSchema = mongoose.Schema(
 
         recommendedTillNow: [{
             type: mongoose.Schema.Types.ObjectId,
-        }]
+        }],
+
+        toBeRecommended: [
+            {
+                type : mongoose.Schema.Types.ObjectId
+            }
+        ]
 
     }
 )

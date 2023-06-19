@@ -64,21 +64,23 @@ const Header = ({ userId }) => {
       </Flex>
       <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent maxW="1000px">
           <ModalHeader>My Recommendations</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>
+          <ModalBody justifyContent='center'>
             {recommendations.map((article, index) => (
               <div key={index}>
                 <h3>{article.title}</h3>
-                <a href={article.url.value} target="_blank" rel="noopener noreferrer">
-                  Click to read the article
+                <a href={article.url} target="_blank" rel="noopener noreferrer" style={{ color: "blue" , alignSelf : "center"}}>
+                  Read me 
                 </a>
+                <br></br>
                 <hr />
+                <br></br>
               </div>
             ))}
           </ModalBody>
-        </ModalContent>
+          </ModalContent>
       </Modal>
     </Flex>
   );

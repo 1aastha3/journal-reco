@@ -33,9 +33,6 @@ const userSchema = mongoose.Schema(
         },
 
         recommendedTillNow: [{
-            identifier: {
-                type : mongoose.Schema.Types.ObjectId
-            },
             url: {
                 type : String
             },
@@ -44,11 +41,14 @@ const userSchema = mongoose.Schema(
             }
         }],
 
-        toBeRecommended: [
-            {
-                type : mongoose.Schema.Types.ObjectId
+        toBeRecommended: [{
+            url: {
+                type : String
+            },
+            title: {
+              type : String  
             }
-        ]
+        }]
 
     }
 )

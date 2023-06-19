@@ -1,8 +1,9 @@
 const User = require("../model")
 const generateToken = require("../generateToken")
+const {startEmailing} = require("../jobScheduler")
 
 const registerUser = async (req, res) => {
-    console.log("registering the user");
+   
     const { name, email, password } = req.body
     
     if (!name || !email || !password) {
@@ -22,6 +23,10 @@ const registerUser = async (req, res) => {
     })
 
     if (user) {
+        console.log('inside register backend');
+        startEmailing(user._id)
+        
+        console.log('inside register backend after calling jobSchedule');
         res.status(201).json({
             _id: user._id,
             name: user.name,

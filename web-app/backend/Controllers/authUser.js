@@ -2,7 +2,7 @@ const User = require("../model")
 const generateToken = require("../generateToken")
 
 const authUser = async (req, res) => {
-    console.log("authenticating the user");
+    
     const { email, password } = req.body;
 
     const user = await User.findOne({ email });

@@ -38,4 +38,3 @@ const addInterest = async (req, res) => {
 }
 
 module.exports = { addInterest }
-

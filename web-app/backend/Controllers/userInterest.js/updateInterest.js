@@ -16,7 +16,7 @@ const updateInterest = async (req, res) => {
 
     try {
         const user = await User.findOne({ _id: uid })
-        console.log(user);
+        
         if (!user)
         {
             res.status(400)

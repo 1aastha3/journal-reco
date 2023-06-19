@@ -1,10 +1,9 @@
 const User = require('../../model')
-
 const { spawn } = require('child_process')
 
 
 const getInterest = async (req, res) => {
-    console.log('fetching');
+    
 
     const uid = req.params.userId
 
@@ -23,11 +22,13 @@ const getInterest = async (req, res) => {
         // sending the array to python // added
         const keywords = user.interests
 
-        const installDependencies = spawn("pip3", ["install", "requests", "pymongo", "bson"]);
+        const installDependencies = spawn("pip3", ["install", "requests", "pymongo"]);
+        
         installDependencies.stdout.on("end", () => {
             const sendToPython = spawn('python3', [`${process.cwd()}/backend/Controllers/userInterest.js/api.py`, ...keywords, uid])
+            sendToPython.stderr.on('data', (data)=>console.log(data.toString()))
             sendToPython.stdout.on('data', (data) => {
-                console.log('logging data now');
+                
                 console.log(data.toString());
                 //TODO: check if database has been updated or not
             })

@@ -53,7 +53,7 @@ const Signup = () => {
         { name, email, password },
         config
       )
-      console.log(data)
+      
       toast({
         title: "Registration Successful",
         status: "success",
@@ -64,6 +64,9 @@ const Signup = () => {
         
       
       localStorage.setItem("userInfo", JSON.stringify(data));
+      localStorage.setItem('userId', data._id);
+
+      
     } catch (error) {
       console.log(error)
       console.log(error.response)

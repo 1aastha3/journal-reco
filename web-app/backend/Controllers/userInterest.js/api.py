@@ -2,16 +2,16 @@ import json
 import pprint
 import requests
 import sys
+from bson.objectid import ObjectId
 import pymongo
 import os
-from dotenv import load_dotenv
-from bson.objectid import ObjectId
 
-load_dotenv()
+import key
+
 
 keywords :list[str] = sys.argv[1:]
-springer_key :str = os.getenv("JOURNAL_API")
-print("inside api.py")
+springer_key :str = key.JOURNAL_API
+
 
 base_url :str = "https://api.springernature.com/metadata"
 
@@ -22,12 +22,12 @@ num_response :int = 10
 articles :list[dict] = []
 
 userId = sys.argv[-1]
-print(userId)
 
-# mongo_uri = os.getenv("MONGO_URI")
-# client = pymongo.MongoClient(mongo_uri)
-# db = client["journal-reco"]
-# collection = db["users"]
+
+mongo_uri = key.MONGO_URI
+client = pymongo.MongoClient(mongo_uri)
+db = client["test"]
+collection = db["users"]
 
 for interest in keywords:
     api_url = f"{base_url}/{response_type}?api_key={springer_key}&q={interest}&s={search_index}&p={num_response}"
@@ -44,17 +44,16 @@ for interest in keywords:
     except Exception as err:
         print(f"ERROR: {err}")
 
-recommendedTillNow = [{
-    'identifier': ObjectId(),
+toBeRecommended = [{
     'url': article['url'][0]['value'],
     'title': article['title']
 } for article in articles]
 
 data = {
-    'recommendedTillNow': recommendedTillNow
+    'toBeRecommended': toBeRecommended
 }
-print(data)
-# collection.update_one({'_id': ObjectId(userId)}, {'$set': data})
+
+collection.update_one({'_id' : ObjectId(userId)},{'$set': data})
 
 #resolve pymongo, dotenv, bson... issue and uncomment line 57, and 27 to 30
 

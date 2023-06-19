@@ -23,7 +23,7 @@ const getInterest = async (req, res) => {
         // sending the array to python // added
         const keywords = user.interests
 
-        const installDependencies = spawn("pip3", ["install", "requests"]);
+        const installDependencies = spawn("pip3", ["install", "requests", "pymongo", "bson"]);
         installDependencies.stdout.on("end", () => {
             const sendToPython = spawn('python3', [`${process.cwd()}/backend/Controllers/userInterest.js/api.py`, ...keywords, uid])
             sendToPython.stdout.on('data', (data) => {

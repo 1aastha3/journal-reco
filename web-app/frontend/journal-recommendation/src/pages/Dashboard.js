@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {Box, CloseButton, Flex, Input} from '@chakra-ui/react'
 import axios from 'axios'
+import Header from '../components/Header'
 
 
 
@@ -79,6 +80,7 @@ useEffect(() => {
 
   return (
     <div>
+      <Header userId={uid} />
       <Box p={4}>
         <Input
           placeholder="Enter interests"

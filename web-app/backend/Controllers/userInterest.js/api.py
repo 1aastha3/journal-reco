@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 keywords :list[str] = sys.argv[1:]
-springer_key :str = "ba1b622422755eaaf763ec9b95b831d7" 
+springer_key :str = os.getenv("JOURNAL_API")
 
 base_url :str = "https://api.springernature.com/metadata"
 

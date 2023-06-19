@@ -22,21 +22,26 @@ const getInterest = async (req, res) => {
 
         // sending the array to python // added
         const keywords = user.interests
+        console.log((keywords));
 
-<<<<<<< HEAD
-            const responseString = data.toString().replace(/^\(|\)$/g, "");
-            const response = JSON.parse(responseString)
+        // const responseString = data.toString().replace(/^\(|\)$/g, "");
+        // const response = JSON.parse(responseString)
 
-            console.log(`Python Output ${data}`);
-=======
-        const installDependencies = spawn("./bin/pip", ["install", "requests"]);
+        // console.log(`Python Output ${data}`);
+        console.log(process.cwd());
+        const installDependencies = spawn("pip3", ["install", "requests"]);
         installDependencies.stdout.on("end", () => {
-            const sendToPython = spawn('./bin/python', ['/api.py', ...keywords])
+            const sendToPython = spawn('python3', [`${process.cwd()}/backend/Controllers/userInterest.js/api.py`, ...keywords])
+            sendToPython.stdout.on('data', (data) => {
+                console.log(data.toString());
+                //TODO: check if database has been updated or not
+            })
             sendToPython.stdout.on('end', () => {
+                
                 console.log("Request sent to recommender")
                 //TODO: check if database has been updated or not
             })
->>>>>>> 29f1abb8df5ea107f21b0e966fd06cc8c644ca96
+// 29f1abb8df5ea107f21b0e966fd06cc8c644ca96
         })
     } catch (error) {
         console.log('Could not get interests');

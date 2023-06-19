@@ -4,7 +4,7 @@ import requests
 import sys
 
 keywords :list[str] = sys.argv[1:]
-
+print("inside api.py")
 springer_key :str = "ba1b622422755eaaf763ec9b95b831d7" 
 
 base_url :str = "https://api.springernature.com/metadata"
@@ -29,3 +29,7 @@ for interest in keywords:
 
     except Exception as err:
         print(f"ERROR: {err}")
+
+print(articles)
+# todo - run recommendation system
+# todo-write code to directly append the response to mongodb

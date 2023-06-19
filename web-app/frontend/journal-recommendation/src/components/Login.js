@@ -13,9 +13,8 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleClick = () => setShow(!show)
-  const submitHandler = async () => {
-    
 
+  const submitHandler = async () => {
     if (!email || !password) {
       toast({
         title: "Please fill up all the fields",

@@ -2,10 +2,9 @@ const User = require("../../model");
 const { getInterest } = require("./getInterest");
 
 const addInterest = async (req, res) => {
-    console.log('adding');
+    // console.log('adding');
     const uid = req.params.userId
     const interest = req.body
- 
 
     if (!interest)
     {
@@ -13,7 +12,6 @@ const addInterest = async (req, res) => {
         res.json("Empty Interest, please provide one!")
         return
     }
-
     try {
         const user = await User.findOne({ _id: uid })
        
@@ -25,7 +23,7 @@ const addInterest = async (req, res) => {
         }
 
         user.interests.push(interest.interests[interest.interests.length - 1]);
-        await user.save() // this line killed me. you have to save it to the database. 
+        await user.save()
         
         res.status(200)
         res.json(user.interests)

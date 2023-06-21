@@ -17,6 +17,7 @@ const Signup = () => {
   const handleClick = () => setShow(!show)
   const handleClick1 = () => setShow1(!show1)
   const submitHandler = async () => {
+
     if (!name || !email || !password || !confirmpassword) {
       toast({
         title: "Please Fill all the Feilds",
@@ -36,11 +37,11 @@ const Signup = () => {
         duration: 5000,
         isClosable: true,
         position: "bottom",
-      });
-      return;
+      })
+      return
     }
 
-    console.log(name, email, password);
+    //console.log(name, email, password);
 
     try {
       const config = {
@@ -64,10 +65,9 @@ const Signup = () => {
       })
         
       
-      localStorage.setItem("userInfo", JSON.stringify(data));
-      localStorage.setItem('userId', data._id);
+      localStorage.setItem("userInfo", JSON.stringify(data))
+      localStorage.setItem('userId', data._id)
 
-      
     } catch (error) {
       console.log(error)
       console.log(error.response)
@@ -77,7 +77,7 @@ const Signup = () => {
         duration: 5000,
         isClosable: true,
         position: "bottom",
-      });
+      })
     }
   }
 
@@ -107,7 +107,7 @@ const Signup = () => {
                 <InputGroup>
                       <Input 
                         type={show ? 'text' : 'password'}
-                    placeholder="Enter you Email"
+                    placeholder="Enter you password"
                     onChange = {(e) => setPassword(e.target.value)}
                     />
                     <InputRightElement width="4.5rem">

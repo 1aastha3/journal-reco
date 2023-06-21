@@ -5,7 +5,6 @@ const {startEmailing} = require("../jobScheduler")
 const registerUser = async (req, res) => {
    
     const { name, email, password } = req.body
-    
     if (!name || !email || !password) {
         res.status(400)
         throw new Error("Please enter all the fields")
@@ -43,7 +42,6 @@ const startEmailingForAllUsers = async () => {
     for (const user of users) {
       // console.log(`running helper fxn for ${user.name}`);
       await startEmailing(user._id, user.signUp);
-      //console.log(`Finished helper function call for ${user.name}`);
   }
 };
 

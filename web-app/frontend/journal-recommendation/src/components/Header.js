@@ -14,39 +14,38 @@ import {
   ModalHeader,
   ModalCloseButton,
   ModalBody,
+  Button,
+  Link,
 } from '@chakra-ui/react';
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 import axios from 'axios';
 
 const Header = ({ userId }) => {
-    
-    const [showModal, setShowModal] = useState(false);
-    const [recommendations, setRecommendations] = useState([]);
 
+    const [showModal, setShowModal] = useState(false)
+    const [recommendations, setRecommendations] = useState([])
 
-
-  const handleLogout = async() => {
-     try {
-         await axios.post('http://localhost:3001/api/user/logout');
-         window.location.href = '/';
-    } catch (error) {
-      console.error('Failed to logout:', error);
-    }
-  };
-
-
-    
-  const handleMyRecommendations = async() => {
-    setShowModal(true);
-    try
-    {
-        const res = await axios.get(`http://localhost:3001/api/user/recommendations/${userId}`)
-        setRecommendations(res.data)
-        console.log(recommendations);
-    }
-    catch (error) {
-        console.error('Failed to fetch recommendations:', error);
+    const handleLogout = async() => {
+      try {
+          await axios.post('http://localhost:3001/api/user/logout')
+          window.location.href = '/'
+      } catch (error) {
+        console.error('Failed to logout:', error)
       }
-  };
+    }
+  
+    const handleMyRecommendations = async() => {
+      setShowModal(true)
+      try
+      {
+          const res = await axios.get(`http://localhost:3001/api/user/recommendations/${userId}`)
+          setRecommendations(res.data)
+          console.log(recommendations)
+      }
+      catch (error) {
+          console.error('Failed to fetch recommendations:', error)
+        }
+    }
 
   return (
     <Flex textAlign="center" justify="space-between" p={4} bg='blue.300'>
@@ -54,13 +53,10 @@ const Header = ({ userId }) => {
         Journal-Recommender |
       </Text>
       <Flex align="center">
-        <Menu>
-          <MenuButton as={Avatar} size="sm" />
-          <MenuList >
-            <MenuItem onClick={handleLogout} fontSize='1.2rem' bg='blue.50'>Logout</MenuItem>
-            <MenuItem onClick={handleMyRecommendations} fontSize= '1.2rem' bg='blue.50'>My Recommendations</MenuItem>
-          </MenuList>
-        </Menu>
+        <Menu>    
+          <MenuButton as={Button} onClick={handleMyRecommendations} fontSize='1.2rem' bg='blue.100' >My Recommendations</MenuButton>
+          <MenuButton as={Button} onClick={handleLogout} fontSize='1.2rem' bg='blue.100' ml="10px">Logout</MenuButton>
+        </Menu>  
       </Flex>
       <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
         <ModalOverlay />
@@ -71,9 +67,8 @@ const Header = ({ userId }) => {
             {recommendations.map((article, index) => (
               <div key={index}>
                 <h3>{article.title}</h3>
-                <a href={article.url} target="_blank" rel="noopener noreferrer" style={{ color: "blue" , alignSelf : "center"}}>
-                  Read me 
-                </a>
+                <Link href={article.url} isExternal color="blue">Read me<ExternalLinkIcon mx="2px" />
+                </Link>
                 <br></br>
                 <hr />
                 <br></br>
@@ -86,4 +81,4 @@ const Header = ({ userId }) => {
   );
 };
 
-export default Header;
+export default Header

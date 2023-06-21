@@ -19,7 +19,7 @@ const Home = () => {
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("userInfo"));
-  }, []);
+  }, [])
 
   return (
     <div>

@@ -3,7 +3,7 @@ const { getInterest } = require('./getInterest');
 
 
 const updateInterest = async (req, res) => {
-    console.log('deleting');
+    // console.log('deleting');
     const uid = req.params.userId
     const  interest  = req.body
     
@@ -13,7 +13,6 @@ const updateInterest = async (req, res) => {
         res.json("delete request failed, and there is nothing to delete")
         return
     }
-
     try {
         const user = await User.findOne({ _id: uid })
         

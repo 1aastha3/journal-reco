@@ -11,40 +11,34 @@ const Dashboard = () => {
   const [currentTag, setCurrentTag] = useState('')
   const [userId, setUserId] = useState('')
 
-  // fetching the user id after login (which is stored in login.js) soon after dashboard page opens.
   useEffect(() => {
-  const storedUserId = localStorage.getItem('userId');
-  setUserId(storedUserId);
-}, []);
+    const storedUserId = localStorage.getItem('userId')
+    setUserId(storedUserId)
+  }, [])
 
-  // fetching interest after fetching userid
-useEffect(() => {
-  if (userId) {
-    fetchInterests();
-  }
-}, [userId]);
+  useEffect(() => {
+    if (userId) {
+      fetchInterests()
+    }
+  }, [userId])
 
   const uid = userId 
 
   const fetchInterests = async () => {
     try {
       const res = await axios.get(`http://localhost:3001/api/user/${uid}/interest`)
-
       const fetched = res.data
       setInterests(fetched)
 
     } catch (error) {
-      console.error('Could not fetch interests', error);
+      console.error('Could not fetch interests', error)
     }
   }
 
-  // event listener of search box
   const handleTagChange = (e) => {
     setCurrentTag(e.target.value)
-
   }
 
-  //event listener on enter press that calls a function to display the entered
   const handleTagKeyPress = (e) => {
     if (e.key === 'Enter' && currentTag.trim() !== '')
     {
@@ -61,12 +55,11 @@ useEffect(() => {
       fetchInterests()
 
     } catch (error) {
-      console.log('Could not add tag, try again!');
+      console.log('Could not add tag, try again!')
     }
   }
 
   const deleteTag = async (index) => {
-    console.log(index);
     try {
       const newInterests = [...interests]
       newInterests.splice(index, 1)
@@ -74,7 +67,7 @@ useEffect(() => {
       setInterests(newInterests)
       fetchInterests()
     } catch (error) {
-      console.log('Could not remove tag, try again!');
+      console.log('Could not remove tag, try again!')
     }
   }
 

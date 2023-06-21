@@ -1,16 +1,19 @@
 import sys
 import json
 import pprint
-import bson.objectid import ObjectId
+from bson.objectid import ObjectId
 import pymongo
 import requests
 import numpy as np
 import pandas as pd
-from nltk.corpus import wordnet as wn
+# import nltk
+# nltk.download("wordnet")
+# from nltk.corpus import wordnet as wn
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
+import key
 
-mongo_uri :int = ""
+mongo_uri :int = key.MONGO_URI
 client = pymongo.MongoClient(mongo_uri)
 db = client["test"]
 collection = db["users"]
@@ -76,10 +79,10 @@ print("\n=== === === === === === === === === ===\n")
 inputs = []
 for key in keywords:
     inputs.append(key)
-    for ss in wn.synsets(key):
-        for word in ss.lemma_names():
-            word = word.replace("_", " ")
-            inputs.append(word)
+    # for ss in wn.synsets(key):
+    #     for word in ss.lemma_names():
+    #         word = word.replace("_", " ")
+    #         inputs.append(word)
 print(inputs)
 print("\n=== === === === === === === === === ===\n")
 
@@ -111,7 +114,7 @@ papers["score"] = (abs_simi + name_simi + title_simi).tolist()
 df = pd.DataFrame.from_dict(papers)
 df.sort_values(by=["score"], ascending=False, inplace=True)
 
-toBeRecommended :list[dict] = [df.to_dict("records")]
+toBeRecommended = df.to_dict("records")
 
 data :dict = {
     "toBeRecommended": toBeRecommended

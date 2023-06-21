@@ -10,7 +10,7 @@ const Login = () => {
   const [password, setPassword] = useState()
 
   const toast = useToast()
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   const handleClick = () => setShow(!show)
 
@@ -27,9 +27,8 @@ const Login = () => {
     }
 
     try {
-
       const config = {
-        headers: {"Content-Type" : "application/json"},
+        headers: {"Content-Type" : "application/json"}
       }
       const { data } = await axios.post(
         "http://localhost:3001/api/user/login",
@@ -37,8 +36,7 @@ const Login = () => {
         config
       )
       const userId  = data._id
-      
-      console.log(JSON.stringify(data))
+      //console.log(JSON.stringify(data))
       toast({
         title: "Login Successful",
         status: "success",
@@ -46,9 +44,10 @@ const Login = () => {
         isClosable: true,
         position: "bottom",
       })
+
       navigate("/dashboard")
-      localStorage.setItem("userInfo", JSON.stringify(data)) // storing user object in the localstorage for
-      localStorage.setItem('userId', userId);
+      localStorage.setItem("userInfo", JSON.stringify(data)) 
+      localStorage.setItem('userId', userId)
       
     } catch (error) {
       toast({
@@ -58,7 +57,7 @@ const Login = () => {
         duration: 5000,
         isClosable: true,
         position: "bottom",
-      });
+      })
      
     }
   }

@@ -4,10 +4,29 @@ const cors = require("cors")
 const path = require("path")
 const userRoutes = require("./Routes/userRoutes")
 const connectDB = require("./db")
+const User = require("../backend/model")
+const { startEmailing } = require("./jobScheduler")
 
 
 dotenv.config()
 connectDB()
+
+async function getUsers() {
+ try {
+  const users = await User.find();
+
+  for (const user of users) {
+    const signUpDate = user.signUp;
+    const userId = user._id;
+
+    await startEmailing(userId, signUpDate);
+  }
+} catch (error) {
+  console.error('Error:', error);
+}
+}
+
+getUsers()
 
 const app = express()
 app.use(express.json())

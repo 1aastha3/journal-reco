@@ -9,31 +9,30 @@ const jobSchedule = async (userId) => {
             const user = await User.findOne({ _id: userId })
         
             if (user.toBeRecommended.length === 0) {
-                console.log('No recommendations to send')
+                console.log(`No recommendations to send for user ${user.name}`)
                 return
             }
 
             const reco = user.toBeRecommended[0];
 
             const transporter = nodemailer.createTransport({
-                host: "smtp.mail.yahoo.com",
+                host: 'smtp.ethereal.email',
                 port: 587,
-                secure: false,
                 auth: {
-                    user: 'asprajapati@yahoo.com',
-                    pass: process.env.PASSWORD
+                    user: 'torrance.ankunding40@ethereal.email',
+                    pass: 'ue4xNXMdfbNs9f57DA'
                 }
             })
 
             const mailContent = {
-                from: 'asprajapati@yahoo.com',
-                to: user.email,
+                from: 'torrance.ankunding40@ethereal.email',
+                to: 'darshanbagrecha1729@gmail.com',
                 subject: 'Recommendation For You',
                 text: `Check out this recommended article: ${reco.title}.`
             }
 
             await transporter.sendMail(mailContent)
-            console.log('Email successfully sent');
+            console.log(`Email successfully sent to ${user.name}`);
 
             user.toBeRecommended.shift()
             user.recommendedTillNow.push(reco)
@@ -46,14 +45,32 @@ const jobSchedule = async (userId) => {
     }
 
 
-const startEmailing = (userId) => {
+const startEmailing = async (userId, signUpDate) => {
+  try {
+        const user = await User.findOne({ _id: userId });
+        const lastMailTime = user.lastMail ? user.lastMail.getTime() : signUpDate.getTime();
+        const currentTime = new Date().getTime();
+        let delay = 0;
+    
+        while (currentTime - lastMailTime < 10000);
 
-    jobSchedule(userId)
+        delay = 10000;
 
-    setInterval(() => {
-        jobSchedule(userId)
-    }, 60000)
+        const sendEmail = async () => {
+            await jobSchedule(user);
+            user.lastMail = new Date();
+            await user.save();
+        };
+        setInterval(async () => {
+            await sendEmail();
+        }, 10000); // Send email every 1 minute (60000 milliseconds)
 
-    console.log('Email scheduled');
-}
+        console.log(`Email scheduled for user ${user.name}`);
+  } catch (error) {
+        console.error('Error:', error);
+  }
+};
+
+
+
 module.exports = { startEmailing }

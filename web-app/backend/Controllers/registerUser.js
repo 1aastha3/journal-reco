@@ -24,7 +24,6 @@ const registerUser = async (req, res) => {
 
     if (user) {
         console.log('inside register backend');
-        startEmailing(user._id)
         
         console.log('inside register backend after calling jobSchedule');
         res.status(201).json({

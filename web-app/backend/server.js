@@ -1,3 +1,4 @@
+const { spawn } = require("child_process")
 const express = require("express")
 const dotenv = require("dotenv")
 const cors = require("cors")
@@ -28,6 +29,16 @@ connectDB()
 // }
 
 // getUsers()
+
+const mail_sc = "mail_scheduler.js"
+const options = {slient:true, detached:true};
+const mailer = spawn("node", [`${process.cwd()}/backend/${mail_sc}`], options);
+
+mailer.stdout.on("data", (data)=>{
+  console.log("===MAIL SCHEDULER RUNNING===")
+  console.log(data.toString());
+  mailer.unref();
+})
 
 startEmailingForAllUsers().catch((error) => {
   console.error('Error starting email scheduling:', error);

@@ -23,15 +23,14 @@ const registerUser = async (req, res) => {
     })
 
     if (user) {
-        console.log('inside register backend');
-        
-        console.log('inside register backend after calling jobSchedule');
         res.status(201).json({
             _id: user._id,
             name: user.name,
             email: user.email,
             token: generateToken(user._id)
         })
+        await startEmailing(user._id, user.signUp)
+        //console.log(`Finished signup call for ${user.name}`);
     }
     else {
         res.status(400)
@@ -39,4 +38,13 @@ const registerUser = async (req, res) => {
     }
 }
 
-module.exports = { registerUser }
+const startEmailingForAllUsers = async () => {
+  const users = await User.find({});
+    for (const user of users) {
+      // console.log(`running helper fxn for ${user.name}`);
+      await startEmailing(user._id, user.signUp);
+      //console.log(`Finished helper function call for ${user.name}`);
+  }
+};
+
+module.exports = { registerUser, startEmailingForAllUsers }

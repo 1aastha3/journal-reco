@@ -1,10 +1,9 @@
-const cron = require("node-cron")
+
 const nodemailer = require("nodemailer")
 const User = require('./model')
 
 const jobSchedule = async (userId) => {
 
-        console.log('started');
         try {
             const user = await User.findOne({ _id: userId })
         
@@ -47,30 +46,31 @@ const jobSchedule = async (userId) => {
 
 const startEmailing = async (userId, signUpDate) => {
   try {
-        const user = await User.findOne({ _id: userId });
-        const lastMailTime = user.lastMail ? user.lastMail.getTime() : signUpDate.getTime();
-        const currentTime = new Date().getTime();
-        let delay = 0;
-    
-        while (currentTime - lastMailTime < 10000);
+    const user = await User.findOne({ _id: userId })
+    const currentTime = new Date().getTime()
+    const lastMailTime = user.lastMail ? user.lastMail.getTime() : signUpDate.getTime()
+    const timeSpentSinceLastMail = currentTime - lastMailTime
+    const interval = 60000
+    let delay = interval - timeSpentSinceLastMail
 
-        delay = 10000;
+    const sendEmail = async () => {
+      await jobSchedule(user._id)
+      user.lastMail = new Date()
+      await user.save();
+    };
 
-        const sendEmail = async () => {
-            await jobSchedule(user);
-            user.lastMail = new Date();
-            await user.save();
-        };
-        setInterval(async () => {
-            await sendEmail();
-        }, 10000); // Send email every 1 minute (60000 milliseconds)
+    setTimeout(async () => {
+      await sendEmail()
+      setInterval(async () => {
+        await sendEmail()
+      }, interval) 
+    }, delay)
 
-        console.log(`Email scheduled for user ${user.name}`);
+   // console.log(`Email scheduled for user ${user.name}`);
   } catch (error) {
-        console.error('Error:', error);
+    console.error('Error:', error)
   }
 };
 
 
-
-module.exports = { startEmailing }
+module.exports = { startEmailing };

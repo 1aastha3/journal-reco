@@ -13,7 +13,7 @@ const getRecommendations = async (req, res) => {
             return
         }
 
-        const recommendations = user.toBeRecommended
+        const recommendations = user.recommendedTillNow
         console.log(recommendations);
         res.status(200).json(recommendations)
 

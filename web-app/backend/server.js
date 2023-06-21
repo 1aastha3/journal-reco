@@ -6,27 +6,32 @@ const userRoutes = require("./Routes/userRoutes")
 const connectDB = require("./db")
 const User = require("../backend/model")
 const { startEmailing } = require("./jobScheduler")
+const { startEmailingForAllUsers } = require("./Controllers/registerUser")
 
 
 dotenv.config()
 connectDB()
 
-async function getUsers() {
- try {
-  const users = await User.find();
+// async function getUsers() {
+//  try {
+//   const users = await User.find();
 
-  for (const user of users) {
-    const signUpDate = user.signUp;
-    const userId = user._id;
+//   for (const user of users) {
+//     const signUpDate = user.signUp;
+//     const userId = user._id;
 
-    await startEmailing(userId, signUpDate);
-  }
-} catch (error) {
-  console.error('Error:', error);
-}
-}
+//     await startEmailing(userId, signUpDate);
+//   }
+// } catch (error) {
+//   console.error('Error:', error);
+// }
+// }
 
-getUsers()
+// getUsers()
+
+startEmailingForAllUsers().catch((error) => {
+  console.error('Error starting email scheduling:', error);
+});
 
 const app = express()
 app.use(express.json())
@@ -46,3 +51,6 @@ app.use("/api/user", userRoutes)
 // server start
 const port = process.env.PORT || 3300
 const server = app.listen(port, console.log(`Server is running on port ${port}`))
+
+
+

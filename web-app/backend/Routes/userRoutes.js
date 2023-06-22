@@ -12,13 +12,15 @@ const { handleRatings } = require("../Controllers/handleRatings")
 
 router.use(express.json()) // express middleware to parse the incoming josn request to pyt on req.body
 
-router.route('/').post(registerUser)
-router.post('/login', authUser) 
-router.post('/:userId/interest', addInterest)
-router.get('/:userId/interest', getInterest)
-router.put('/:userId/interest', updateInterest)
-router.post('/logout', logout);
-router.get('/recommendations/:userId', getRecommendations)
-router.put('/:userId/recommendations/:articleId', handleRatings);
+// handles all the routes in the projects by calling respective controller functions
+
+router.route('/').post(registerUser) // route for signUp page
+router.post('/login', authUser)  // route for login page
+router.post('/:userId/interest', addInterest) // route for adding user interests
+router.get('/:userId/interest', getInterest) // route for fetching user interests
+router.put('/:userId/interest', updateInterest) // route for configuring user interests
+router.post('/logout', logout); // route for logging out
+router.get('/recommendations/:userId', getRecommendations) // route to fetch recommendations
+router.put('/:userId/recommendations/:articleId', handleRatings); // route to handle feedbacks (ratings)
 
 module.exports =  router 

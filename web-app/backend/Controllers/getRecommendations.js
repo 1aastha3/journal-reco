@@ -1,8 +1,8 @@
 const User = require('../model')
+// controller function for fetching recommendations 
 
 const getRecommendations = async (req, res) => {
     const userId = req.params.userId
-
     try {
         const user = await User.findOne({ _id: userId })
         if (!user)

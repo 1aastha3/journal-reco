@@ -77,8 +77,8 @@ const Header = ({ userId }) => {
 
   return (
     <Flex textAlign="center" justify="space-between" p={4} bg='blue.300'>
-      <Text fontSize="2xl" fontWeight="bold" justifyI='center' color='white'>
-        Journal-Recommender |
+      <Text fontSize="4xl" fontWeight="bold" justifyI='center' color='white' ml="7px">
+        Journal-Hive |
       </Text>
       <Flex align="center">
         <Menu>

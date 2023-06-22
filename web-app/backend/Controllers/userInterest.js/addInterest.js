@@ -1,6 +1,6 @@
 const User = require("../../model");
 const { getInterest } = require("./getInterest");
-
+// controller function to handle adding of user interests
 const addInterest = async (req, res) => {
     // console.log('adding');
     const uid = req.params.userId

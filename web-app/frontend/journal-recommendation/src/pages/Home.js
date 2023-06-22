@@ -35,7 +35,7 @@ const Home = () => {
         borderWidth="1px"
       >
         <Text fontSize="4xl" fontFamily="sans serif" as='b'>
-          IEEE/Springer Paper Recommendation
+          Journal-Hive
         </Text>
         </Box>
         <br></br>

@@ -1,6 +1,6 @@
 const User = require('../../model');
 const { getInterest } = require('./getInterest');
-
+// controller function for configuring user interests
 
 const updateInterest = async (req, res) => {
     // console.log('deleting');

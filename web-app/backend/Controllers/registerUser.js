@@ -2,6 +2,7 @@ const User = require("../model")
 const generateToken = require("../generateToken")
 const {startEmailing} = require("../jobScheduler")
 
+// controller function for registering the user
 const registerUser = async (req, res) => {
    
     const { name, email, password } = req.body
@@ -37,6 +38,7 @@ const registerUser = async (req, res) => {
     }
 }
 
+// calling email scheduler when the user signs up
 const startEmailingForAllUsers = async () => {
   const users = await User.find({});
     for (const user of users) {

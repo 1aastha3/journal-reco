@@ -2,11 +2,8 @@ import { Button, FormControl, FormLabel, Input, InputGroup, InputRightElement, V
 import axios from 'axios'
 import React, { useState } from 'react'
 
-
 const Signup = () => {
   const toast = useToast() 
-
-
   const [show, setShow] = useState(false)
   const [show1, setShow1] = useState(false)
   const [name, setName] = useState()

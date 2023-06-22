@@ -1,5 +1,6 @@
 const User = require('../model');
 
+// controller function to handle feedback on recommended articles
 const handleRatings = async (req, res) => {
   const { userId, articleId } = req.params
   const { rating } = req.body
@@ -11,12 +12,10 @@ const handleRatings = async (req, res) => {
     )
 
     if (recommendedArticle) {
-
         recommendedArticle.rating = rating
-
-      await user.save();
-
-      res.status(200).json("Successful")
+        await user.save();
+      
+        res.status(200).json("Successful")
     } else {
       res.status(404).json("Failed")
     }

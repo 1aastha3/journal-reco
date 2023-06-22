@@ -1,9 +1,8 @@
-
 const nodemailer = require("nodemailer")
 const User = require('./model')
 
+// calling jobSchedule() function to handle email sending through nodemailer, also updating the database recommendation fields.
 const jobSchedule = async (userId) => {
-
         try {
             const user = await User.findOne({ _id: userId })
             if (user.toBeRecommended.length === 0) {
@@ -11,8 +10,9 @@ const jobSchedule = async (userId) => {
                 return
             }
 
-          const reco = user.toBeRecommended[0];
+          const reco = user.toBeRecommended[0]; // fetches the most recommended article/paper for the user
 
+            // object parameters for SMTP protocols in nodemailer.
             const transporter = nodemailer.createTransport({
                 host: 'smtp.ethereal.email',
                 port: 587,
@@ -21,12 +21,16 @@ const jobSchedule = async (userId) => {
                     pass: 'ue4xNXMdfbNs9f57DA'
                 }
             })
-
-            let mailHead = `<h2>Greetings! Following is the recommeded article of the week: </h2>\n\n`
-            let mailTitle = `<h1>Title: ${reco.title}</h1>\n\n`
-            let mailAbstract = `<p style = "font-size:15px">Abstract: ${reco['abstract']}</p>\n\n\n`
-            let mailSalutation = `\n\n <h4>Thank You for subscribing to our weekly reseach paper recommendations!</h4>`
-            let mailBody = `${mailHead}${mailTitle}${mailAbstract}${mailSalutation}`
+            
+          // designing the mail content to be sent
+            let mailHead = `<h2>Greetings! Following is the recommeded article of the week: </h2><br><br>`
+            let mailTitle = `<h1>Title: ${reco.title}</h1><br><br>`
+            let mailAbstract = `<p style = "font-size:15px">Abstract: ${reco['abstract']}</p><br><br><br>`
+            let mailSalutation = `<br> <h4>Thank You for subscribing to our weekly reseach paper recommendations!</h4>`
+            let mailURL = `<a href="${reco.url}">Visit the article</a><br>`
+            let mailBody = `${mailHead}${mailTitle}${mailAbstract}${mailURL}${mailSalutation}`
+          
+            // user and sender parameters for SMTP protocols
             const mailContent = {
                 from: 'torrance.ankunding40@ethereal.email',
                 to: user.email,
@@ -37,6 +41,7 @@ const jobSchedule = async (userId) => {
             await transporter.sendMail(mailContent)
             console.log(`Email successfully sent to ${user.name}`);
 
+            // moving the recommendation from "toBeRecommended" field to "recommendedTillNow" field.
             user.toBeRecommended.shift()
             user.recommendedTillNow.push(reco)
             await user.save()
@@ -46,6 +51,7 @@ const jobSchedule = async (userId) => {
         }
     }
 
+// schedules emails at regular intervals by referring to the lastMail field of database
 const startEmailing = async (userId, signUpDate) => {
   try {
       const user = await User.findOne({ _id: userId })
@@ -60,6 +66,7 @@ const startEmailing = async (userId, signUpDate) => {
         await user.save();
       };
 
+      // schedules mail every minute (60000 milliseconds) for testing purpose
       setTimeout(async () => {
         await sendEmail()
 

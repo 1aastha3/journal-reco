@@ -1,6 +1,6 @@
 const User = require("../model")
 const generateToken = require("../generateToken")
-
+// controller function for the user to log in
 const authUser = async (req, res) => {
     
     const { email, password } = req.body;

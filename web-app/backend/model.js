@@ -1,5 +1,6 @@
 const mongoose = require("mongoose")
 
+// User Schema storing the following fields on our database
 const userSchema = mongoose.Schema(
     {
         name: {

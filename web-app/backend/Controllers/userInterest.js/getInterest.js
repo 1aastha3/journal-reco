@@ -1,6 +1,6 @@
 const User = require('../../model')
 const { spawn } = require('child_process')
-
+// controller function to fetch interests and send it to recommendation engine and SPRINGER API handler
 
 const getInterest = async (req, res) => {
 
@@ -17,28 +17,23 @@ const getInterest = async (req, res) => {
         res.status(200)
         res.json(user.interests)
 
-        // sending the array to python // added
+        // sending command-line arguments to python
         const keywords = user.interests
         keywords.forEach(key => {
             key = key.replace(" ", "_")
         })
 
-        const installDependencies = spawn("pip3", ["install", "requests", "pymongo", "scikit-learn", "nltk", "pandas"]);
+        const installDependencies = spawn("pip3", ["install", "requests", "pymongo", "scikit-learn", "nltk", "pandas"]); // installing the required dependencies for the python script to run
         
         installDependencies.stdout.on("end", () => {
-            // const installWordNet = spawn('python3', [`${process.cwd()}/backend/Controllers/userInterest.js/install.py`])
-            // installWordNet.stdout.on("end", () => {
+                
+                //executing python script by spawning the child process
                 const sendToPython = spawn('python3', [`${process.cwd()}/backend/Controllers/userInterest.js/api_test.py`, ...keywords, uid])
                 sendToPython.stderr.on('data', (data)=>console.log(data.toString()))
-                sendToPython.stdout.on('data', (data) => {
-                    console.log(data.toString());
-                    //TODO: check if database has been updated or not
-                })
+                sendToPython.stdout.on('data', (data) => {})
                 sendToPython.stdout.on('end', () => {
                     console.log("Request sent to recommender")
-                    //TODO: check if database has been updated or not
                 })
-            //})
         })
     } catch (error) {
         console.log('Could not get interests');

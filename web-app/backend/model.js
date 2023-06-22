@@ -38,7 +38,11 @@ const userSchema = mongoose.Schema(
             },
             title: {
               type : String  
-            }
+            },
+            rating: {
+              type: Number,
+              default: 0,
+            },
         }],
 
         toBeRecommended: [{

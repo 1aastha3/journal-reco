@@ -44,6 +44,7 @@ for interest in keywords:
     except Exception as err:
         print(f"ERROR: {err}")
 
+print(articles)
 toBeRecommended = [{
     'url': article['url'][0]['value'],
     'title': article['title']

@@ -26,6 +26,7 @@
     "nodemailer": "^6.9.3",
     "nodemon": "^2.0.22",
     "os": "^0.1.2",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "react-icons": "^4.10.1"
   }
 }

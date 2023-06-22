@@ -60,7 +60,7 @@ const startEmailing = async (userId, signUpDate) => {
 
         setInterval(async () => {
           await sendEmail()
-        }, interval) 
+        }, 60000) 
 
       }, delay)
     // console.log(`Email scheduled for user ${user.name} OLD`);

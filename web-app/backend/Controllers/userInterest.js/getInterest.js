@@ -19,6 +19,9 @@ const getInterest = async (req, res) => {
 
         // sending the array to python // added
         const keywords = user.interests
+        keywords.forEach(key => {
+            key = key.replace(" ", "_")
+        })
 
         const installDependencies = spawn("pip3", ["install", "requests", "pymongo", "scikit-learn", "nltk", "pandas"]);
         

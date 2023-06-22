@@ -11,7 +11,7 @@ const jobSchedule = async (userId) => {
                 return
             }
 
-            const reco = user.toBeRecommended[0];
+          const reco = user.toBeRecommended[0];
 
             const transporter = nodemailer.createTransport({
                 host: 'smtp.ethereal.email',
@@ -22,11 +22,16 @@ const jobSchedule = async (userId) => {
                 }
             })
 
+            let mailHead = `<h2>Greetings! Following is the recommeded article of the week: </h2>\n\n`
+            let mailTitle = `<h1>Title: ${reco.title}</h1>\n\n`
+            let mailAbstract = `<p style = "font-size:15px">Abstract: ${reco['abstract']}</p>\n\n\n`
+            let mailSalutation = `\n\n <h4>Thank You for subscribing to our weekly reseach paper recommendations!</h4>`
+            let mailBody = `${mailHead}${mailTitle}${mailAbstract}${mailSalutation}`
             const mailContent = {
                 from: 'torrance.ankunding40@ethereal.email',
                 to: user.email,
-                subject: 'Recommendation For You',
-                text: `Check out this recommended article: ${reco.title}.`
+                subject: `Check out this recommended article: ${reco.title}.`,
+                html: `${mailBody}`
             }
 
             await transporter.sendMail(mailContent)

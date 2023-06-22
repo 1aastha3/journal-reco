@@ -110,7 +110,21 @@ for key in inputs:
     title_simi += np.array(list(map(lambda x: x[0][0], list(map(lambda x: cosine_similarity(interest, x), feature)))))
 print("\n=== === === === === === === === === ===\n")
 
-papers["score"] = (abs_simi + name_simi + title_simi).tolist()
+user = collection.find_one({"_id" : ObjectId(user_id)})
+recommended = user["recommendedTillNow"]
+
+count = 0
+feature = tfid_vectorizer.fit_transform(papers["abstract"])
+prev_simi = np.zeros(num_response*len(keywords))
+
+for reco in reversed(recommended):
+    past_reco = tfid_vectorizer.transform([reco['abstract']])
+    prev_simi += reco["rating"]*np.array(list(map(lambda x: x[0][0], list(map(lambda x: cosine_similarity(past_reco, x), feature)))))
+    count += 1
+    if count > 10:
+        break
+
+papers["score"] = (abs_simi + name_simi + title_simi + prev_simi).tolist()
 df = pd.DataFrame.from_dict(papers)
 df.sort_values(by=["score"], ascending=False, inplace=True)
 

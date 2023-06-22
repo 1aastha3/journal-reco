@@ -43,6 +43,12 @@ const userSchema = mongoose.Schema(
               type: Number,
               default: 0,
             },
+            abstract: {
+                type :String
+            },
+            pub_name: {
+                type: String
+            }
         }],
 
         toBeRecommended: [{
@@ -51,6 +57,12 @@ const userSchema = mongoose.Schema(
             },
             title: {
               type : String  
+            },
+            abstract: {
+                type :String
+            },
+            pub_name: {
+                type: String
             }
         }]
 

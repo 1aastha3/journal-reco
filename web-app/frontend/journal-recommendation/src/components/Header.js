@@ -64,9 +64,11 @@ const Header = ({ userId }) => {
 
   const handleMyRecommendations = async () => {
     setShowModal(true)
+    
     try {
       const res = await axios.get(`http://localhost:3001/api/user/recommendations/${userId}`)
-      setRecommendations(res.data)
+      
+      setRecommendations(res.data.reverse())
       console.log(recommendations)
     } catch (error) {
       console.error('Failed to fetch recommendations:', error)

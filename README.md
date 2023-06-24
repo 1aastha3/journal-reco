@@ -32,6 +32,13 @@ Handles user authentication, user interest configuration, mail scheduling (nodem
 Uses TFIDF based vectorization of user interests and SPRINGER API fetched articles for calculating recommendation scores.
 It also cross checks with its previously recommended articles based on the user ratings (Feedback system).
 
+# How to run it on your local machine
+- Clone the git repository in you desired directory
+- Run ```npm install``` in ```web-app``` directory and ```web-app/frontend/journal-recommendation```
+- Make a mongo database on a hosting service
+- Find variables and fields in whole project directory and give MONGO_URI the link to the hosted database
+- Run ```npm run dev``` in backend and ```npm run start``` in frontend directories
+
 # Ways to Contribute
 
 One can contribute in this project by

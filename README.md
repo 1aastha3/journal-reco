@@ -29,24 +29,28 @@ Handles user authentication, user interest configuration, mail scheduling (nodem
 
 ## Recommendation Engine
 
-Uses TFIDF based vectorization of user interests and SPRINGER API fetched articles for calculating recommendation scores.
-It also cross checks with its previously recommended articles based on the user ratings (Feedback system).
+Uses TFIDF-based vectorization of user interests and SPRINGER API fetched articles for calculating recommendation scores.
+It also cross-checks with its previously recommended articles based on the user ratings (Feedback system).
 
 # How to run it on your local machine
-- Clone the git repository in you desired directory
+- Clone the git repository in your desired directory
 - Run ```npm install``` in ```web-app``` directory and ```web-app/frontend/journal-recommendation```
-- Make a mongo database on a hosting service
-- Find variables and fields in whole project directory and give MONGO_URI the link to the hosted database
+- Make a Mongo database on a hosting service
+- Find variables and fields in the whole project directory and give MONGO_URI the link to the hosted database
+- Generate json web token from jwt.io website and assign JWT_TOKEN the value
+- Create a ```.env``` file in the ```web-app``` directory and store PORT, MONGO_URI and JWT_TOKEN variables with the corresponding values
+- Create an account on Ethereal platform (https://ethereal.email/).
+- In the file named ```jobSchedule.js``` file in the /web-app/backend/Controllers/userInterests.js/ directory, you can edit the "to" field of the mailContent object as per your requirements.
 - Run ```npm run dev``` in backend and ```npm run start``` in frontend directories
 
 # Ways to Contribute
 
-One can contribute in this project by
+One can contribute to this project by
 
 - Improving the existing documentation
 - Incorporating other APIs like IEEE, ArXiv, etc.
 - Improving the recommendation engine by using deep learning models (like BERT).
-- Improving the existing UI for making it more intuitive and delivering better user experience.
+- Improving the existing UI to make it more intuitive and deliver a better user experience.
 
 # Scaling up/ similar innovative ideas
 

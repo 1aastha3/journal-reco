@@ -58,7 +58,7 @@ const startEmailing = async (userId, signUpDate) => {
       const currentTime = new Date().getTime()
       const lastMailTime = user.lastMail ? user.lastMail.getTime() : signUpDate.getTime()
       const timeSpentSinceLastMail = currentTime - lastMailTime
-      let delay = 60000 - timeSpentSinceLastMail
+      let delay = 30000 - timeSpentSinceLastMail
 
       const sendEmail = async () => {
         await jobSchedule(user._id)
@@ -72,7 +72,7 @@ const startEmailing = async (userId, signUpDate) => {
 
         setInterval(async () => {
           await sendEmail()
-        }, 60000) 
+        }, 30000) 
 
       }, delay)
     // console.log(`Email scheduled for user ${user.name} OLD`);

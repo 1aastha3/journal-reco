@@ -33,14 +33,14 @@ Uses TFIDF-based vectorization of user interests and SPRINGER API fetched articl
 It also cross-checks with its previously recommended articles based on the user ratings (Feedback system).
 
 # How to run it on your local machine after downloading them as a zip file in your desired directory
-- Run ```npm install``` in ```web-app``` directory and ```web-app/frontend/journal-recommendation```
-- Make a Mongo database on a hosting service
-- Find variables and fields in the whole project directory and give MONGO_URI the link to the hosted database
-- Generate json web token from jwt.io website and assign JWT_SECRET the value
-- Create a ```.env``` file in the ```web-app``` directory and store PORT, MONGO_URI and JWT_SECRET variables with the corresponding values
+
+- Run `npm install` in `web-app` directory and `web-app/frontend/journal-recommendation` directories.
+
 - Create an account on the Ethereal platform (https://ethereal.email/).
-- In the file named ```jobSchedule.js``` inside the ```/web-app/backend/Controllers/userInterests.js/``` directory, you can edit the "to" field of the "mailContent" object as per your requirements. In the same file, replace the "user" and "pass" string fields of the "transporter" object with the credentials thatyou obtain from Ethereal upon signUp.
-- Run ```npm run dev``` in backend and ```npm start``` in ```web-app/frontend/journal-recommendation```
+
+- The ethereal platform will provide a "user" and a "pass" credential. Replace these with "user" and "pass" fields inside the "transporter" object of the file named `jobSchedule.js` inside the `/web-app/backend/jobSchedule.js` directory.
+
+- Run `npm run dev` in `web-app/backend` and `npm start` in `web-app/frontend/journal-recommendation`
 
 # Ways to Contribute
 

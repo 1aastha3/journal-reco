@@ -44,6 +44,8 @@ It also cross-checks with its previously recommended articles based on the user 
 
 - Run `npm run dev` in `web-app/backend` and `npm start` in `web-app/frontend/journal-recommendation`
 
+- The new recomendations in the "my recommendation" modal will be rendered upon clicking the button only.
+
 # Ways to Contribute
 
 One can contribute to this project by

@@ -4,7 +4,7 @@
 
 ### Description
 
-A recommendation engine for research papers from SPRINGER with simple and intuitive web UI.
+A recommendation engine for research papers from SPRINGER with a simple and intuitive web UI. A feedback system is incorporated through user ratings to improve the accuracy and relevance of the recommended articles. Integration of machine learning algorithms, API endpoints, and front end is efficient to ensure a smooth user experience.
 
 ### Tech Stack
 

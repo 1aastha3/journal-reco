@@ -33,7 +33,7 @@ const getInterest = async (req, res) => {
         //executing python script by spawning the child process
         const sendToPython = spawn(py, [`${process.cwd()}/backend/Controllers/userInterest.js/api_test.py`, ...keywords, uid])
         sendToPython.stderr.on('data', (data)=>console.log(data.toString()))
-        endToPython.stdout.on('data', (data) => {})
+        sendToPython.stdout.on('data', (data) => {})
         sendToPython.stdout.on('end', () => { console.log("Request sent to recommender") })
         //})
     } catch (error) {

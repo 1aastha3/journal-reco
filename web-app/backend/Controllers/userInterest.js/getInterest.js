@@ -27,7 +27,7 @@ const getInterest = async (req, res) => {
         
         //installDependencies.stdout.on("end", () => {
 
-        let py = "python3
+        let py = "python3"
         if (process.platform === "win32" || process.platform == "win64") py = "python";
                 
         //executing python script by spawning the child process

@@ -36,6 +36,8 @@ It also cross-checks with its previously recommended articles based on the user 
 
 - Run `npm install` in `web-app` directory and `web-app/frontend/journal-recommendation` directories.
 
+- Run `pip install -r requirements.txt` in `/web-app` directory to install required python libraries.
+
 - Create an account on the Ethereal platform (https://ethereal.email/).
 
 - The ethereal platform will provide a "user" and a "pass" credential. Replace these with "user" and "pass" fields inside the "transporter" object of the file named `jobSchedule.js` inside the `/web-app/backend/jobSchedule.js` directory.

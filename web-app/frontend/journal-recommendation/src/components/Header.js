@@ -75,6 +75,18 @@ const Header = ({ userId }) => {
     }
   }
 
+  const updateRecommendations = async() => {
+    try {
+      setInterval( async() => {
+        const res = await axios.get(`http://localhost:3001/api/user/recommendations/${userId}`)
+        setRecommendations(res.data.reverse())
+        console.log(recommendations)
+      }, 60000 )
+    } catch (error) {
+      console.error('Failed to fetch recommendations:', error)
+    }
+  }
+
   return (
     <Flex textAlign="center" justify="space-between" p={4} bg='blue.300'>
       <Text fontSize="4xl" fontWeight="bold" justifyI='center' color='white' ml="7px">
@@ -86,7 +98,7 @@ const Header = ({ userId }) => {
           <MenuButton as={Button} onClick={handleLogout} fontSize='1.2rem' bg='blue.100' ml="10px">Logout</MenuButton>
         </Menu>
       </Flex>
-      <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
+      <Modal onOpen = {updateRecommendations} isOpen={showModal} onClose={() => setShowModal(false)}>
         <ModalOverlay />
         <ModalContent maxW="1000px">
           <ModalHeader>My Recommendations</ModalHeader>

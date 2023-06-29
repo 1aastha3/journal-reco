@@ -81,7 +81,7 @@ const Header = ({ userId }) => {
         const res = await axios.get(`http://localhost:3001/api/user/recommendations/${userId}`)
         setRecommendations(res.data.reverse())
         console.log(recommendations)
-      }, 60000 )
+      }, 20000 )
     } catch (error) {
       console.error('Failed to fetch recommendations:', error)
     }
